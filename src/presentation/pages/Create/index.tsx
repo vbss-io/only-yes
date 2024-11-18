@@ -151,7 +151,6 @@ export const Create = () => {
                     key={value.value}
                     value={value.value}
                     defaultChecked={index === 0}
-                    onClick={() => console.log("option")}
                   >
                     {value.label}
                   </option>
