@@ -2,6 +2,7 @@ import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import Image from "@tiptap/extension-image";
 import Placeholder from "@tiptap/extension-placeholder";
+import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Youtube from "@tiptap/extension-youtube";
 import { EditorContent, useEditor } from "@tiptap/react";
@@ -46,6 +47,9 @@ export const Editor = ({
       Youtube.configure({
         autoplay: true,
       }),
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
     ],
     content: content ?? "",
     onUpdate({ editor }) {
@@ -70,7 +74,7 @@ export const Editor = ({
   }, [videoUrl]);
 
   return (
-    <S.Container viewMode>
+    <S.Container viewMode={viewMode}>
       {label && <S.EditorLabel>{label}</S.EditorLabel>}
       {!viewMode && <EditorMenu editor={editor} />}
       <S.EditorContainer>

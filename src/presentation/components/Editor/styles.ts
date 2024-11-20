@@ -7,7 +7,7 @@ export const Container = styled("div", {
     viewMode: {
       true: {
         ".ProseMirror": {
-          border: "none",
+          border: "none !important",
         },
       },
     },
