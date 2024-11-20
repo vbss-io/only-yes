@@ -33,7 +33,7 @@ export const EditorMenu = ({ editor }: EditorMenuProps) => {
 
   const addImage = () => {
     const addImageModal = document.getElementById("addImageModal");
-    editor?.chain().focus().setImage({ src: imageUrl }).run();
+    if (imageUrl) editor?.chain().focus().setImage({ src: imageUrl }).run();
     const addImageModalCloseButton = addImageModal
       ?.childNodes[2] as HTMLButtonElement;
     setImageUrl("");
