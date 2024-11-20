@@ -66,7 +66,8 @@ export const ButtonContainer = styled("div", {
 });
 
 export const Button = styled(ButtonComponent, {
-  width: "8rem",
+  minWidth: "8rem",
+  maxWidth: "10rem",
   height: "3.5rem",
   borderRadius: "10rem",
   border: "none",

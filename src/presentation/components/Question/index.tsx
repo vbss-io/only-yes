@@ -27,7 +27,7 @@ export const Question = ({ question }: QuestionProps) => {
 
   useEffect(() => {
     let intervalId: string | number | NodeJS.Timeout | undefined;
-    if (noButtonMoves >= 20 && !confirmed) {
+    if (noButtonMoves >= 5 && !confirmed) {
       intervalId = setInterval(() => {
         const bodyWidth = document.body.clientWidth;
         const bodyHeight = document.body.clientHeight;
