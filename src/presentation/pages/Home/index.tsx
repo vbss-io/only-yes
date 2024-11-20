@@ -34,6 +34,7 @@ export const Home = () => {
 
   return (
     <S.Container id="homePage">
+      <title>Only Yes {question ? `- ${question.code}` : ""}</title>
       {isLoading && <Loading />}
       {!isLoading && state?.code && !question && (
         <S.Text>Nenhuma pergunta encontrada.</S.Text>

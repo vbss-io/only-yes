@@ -14,6 +14,7 @@ export const Redirect = () => {
 
   return (
     <S.Container>
+      <title>Only Yes</title>
       <Loading />
     </S.Container>
   );
