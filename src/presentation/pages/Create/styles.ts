@@ -18,7 +18,7 @@ export const Card = styled("div", {
   padding: "2rem",
 
   "@md": {
-    maxWidth: "40rem",
+    maxWidth: "50rem",
   },
 });
 

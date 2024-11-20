@@ -32,6 +32,9 @@ const createQuestionForm = z.object({
     })
     .min(3, {
       message: "A Reposta Positiva é obrigatória.",
+    })
+    .max(15, {
+      message: "A Reposta Positiva deve ter até 15 caracteres.",
     }),
   noText: z
     .string({
@@ -39,6 +42,9 @@ const createQuestionForm = z.object({
     })
     .min(3, {
       message: "A Reposta Negativa é obrigatória.",
+    })
+    .max(15, {
+      message: "A Reposta Negativa deve ter até 15 caracteres.",
     }),
   answerType: z.string().min(1, {
     message: "O tipo de Feedback é obrigatório.",
@@ -100,6 +106,7 @@ export const Create = () => {
 
   return (
     <S.Container>
+      <title>Only Yes - Create</title>
       <S.Card>
         <S.Header>
           <Pen />
