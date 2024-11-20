@@ -1,5 +1,5 @@
 import { styled } from "@/presentation/config/stitches.config";
-import { Button as ButtonComponent } from "vbss-ui";
+import { Button as ButtonComponent, Dialog as DialogComponent } from "vbss-ui";
 
 export const Container = styled("div", {
   display: "flex",
@@ -87,4 +87,22 @@ export const Preview = styled("div", {
 export const ColorCode = styled("div", {
   fontSize: "0.875rem",
   color: "$text",
+});
+
+export const Dialog = styled(DialogComponent, {
+  backgroundColor: "$background",
+  color: "$text",
+
+  h2: {
+    color: "$text",
+  },
+
+  p: {
+    color: "$text",
+  },
+
+  input: {
+    width: "100%",
+    color: "black",
+  },
 });

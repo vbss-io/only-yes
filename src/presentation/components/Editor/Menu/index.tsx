@@ -8,6 +8,9 @@ import {
   PaintBrush,
   PaintBucket,
   Quotes,
+  TextAlignCenter,
+  TextAlignLeft,
+  TextAlignRight,
   TextB,
   TextHOne,
   TextHThree,
@@ -17,7 +20,8 @@ import {
   TextTSlash,
 } from "@phosphor-icons/react";
 import { Editor } from "@tiptap/react";
-import { useCallback } from "react";
+import { useState } from "react";
+import { Input } from "vbss-ui";
 import * as S from "./styles";
 
 interface EditorMenuProps {
@@ -25,13 +29,16 @@ interface EditorMenuProps {
 }
 
 export const EditorMenu = ({ editor }: EditorMenuProps) => {
-  const addImage = useCallback(() => {
-    const url = window.prompt("URL");
+  const [imageUrl, setImageUrl] = useState("");
 
-    if (url) {
-      editor?.chain().focus().setImage({ src: url }).run();
-    }
-  }, [editor]);
+  const addImage = () => {
+    const addImageModal = document.getElementById("addImageModal");
+    editor?.chain().focus().setImage({ src: imageUrl }).run();
+    const addImageModalCloseButton = addImageModal
+      ?.childNodes[2] as HTMLButtonElement;
+    setImageUrl("");
+    addImageModalCloseButton?.click();
+  };
 
   if (!editor) {
     return null;
@@ -155,6 +162,36 @@ export const EditorMenu = ({ editor }: EditorMenuProps) => {
         <TextHOne />
       </S.Button>
       <S.Button
+        onClick={() => editor.chain().focus().setTextAlign("left").run()}
+        variant={editor.isActive({ textAlign: "left" }) ? "primary" : "ghost"}
+        active={editor.isActive({ textAlign: "left" })}
+        type="button"
+        size="icon-sm"
+        rounded="full"
+      >
+        <TextAlignLeft />
+      </S.Button>
+      <S.Button
+        onClick={() => editor.chain().focus().setTextAlign("center").run()}
+        variant={editor.isActive({ textAlign: "center" }) ? "primary" : "ghost"}
+        active={editor.isActive({ textAlign: "center" })}
+        type="button"
+        size="icon-sm"
+        rounded="full"
+      >
+        <TextAlignCenter />
+      </S.Button>
+      <S.Button
+        onClick={() => editor.chain().focus().setTextAlign("right").run()}
+        variant={editor.isActive({ textAlign: "right" }) ? "primary" : "ghost"}
+        active={editor.isActive({ textAlign: "right" })}
+        type="button"
+        size="icon-sm"
+        rounded="full"
+      >
+        <TextAlignRight />
+      </S.Button>
+      <S.Button
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         variant={editor.isActive("heading", { level: 2 }) ? "primary" : "ghost"}
         active={editor.isActive("heading", { level: 2 })}
@@ -204,15 +241,33 @@ export const EditorMenu = ({ editor }: EditorMenuProps) => {
       >
         <Quotes />
       </S.Button>
-      <S.Button
-        onClick={addImage}
-        variant="ghost"
-        type="button"
-        size="icon-sm"
-        rounded="full"
+      <S.Dialog
+        id="addImageModal"
+        title="Adicionar Imagem"
+        description="Insira uma URL válida para a imagem"
+        trigger={
+          <S.Button
+            as="div"
+            onClick={addImage}
+            variant="ghost"
+            type="button"
+            size="icon-sm"
+            rounded="full"
+          >
+            <Image />
+          </S.Button>
+        }
       >
-        <Image />
-      </S.Button>
+        <Input
+          rounded="full"
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
+          buttonProps={{
+            children: <Image color="white" width="1.3rem" height="1.3rem" />,
+            onClick: () => addImage(),
+          }}
+        />
+      </S.Dialog>
       <S.Button
         onClick={() => editor.chain().focus().unsetAllMarks().run()}
         variant="ghost"
