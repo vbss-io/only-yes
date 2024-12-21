@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <S.Container>
       <S.CreatedBy>
-        {t("Criado por")}
+        {t("Criado por")}{" "}
         <a href="https://vbss.io" target="_blank">
           Vitor Bastos
         </a>
