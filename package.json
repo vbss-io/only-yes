@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.53.0",
     "react-router-dom": "^6.22.3",
+    "vbss-translator": "^1.0.1",
     "vbss-ui": "^0.2.2",
     "zod": "^3.23.8"
   },
