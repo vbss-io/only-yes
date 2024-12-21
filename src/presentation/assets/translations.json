@@ -1,0 +1,142 @@
+[
+  {
+    "pt": "Criar",
+    "en": "Create"
+  },
+  {
+    "pt": "Criar Pergunta",
+    "en": "Create Question"
+  },
+  {
+    "pt": "Criar sua primeira pergunta",
+    "en": "Create your first question"
+  },
+  {
+    "pt": "Criado por",
+    "en": "Created by"
+  },
+  {
+    "pt": "Crie Sua Pergunta",
+    "en": "Create Your Question"
+  },
+  {
+    "pt": "Nenhuma pergunta encontrada.",
+    "en": "No questions found."
+  },
+  {
+    "pt": "Pergunta:",
+    "en": "Question:"
+  },
+  {
+    "pt": "Digite a Pergunta",
+    "en": "Enter the Question"
+  },
+  {
+    "pt": "Resposta Positiva:",
+    "en": "Positive Response:"
+  },
+  {
+    "pt": "Resposta Negativa:",
+    "en": "Negative Response:"
+  },
+  {
+    "pt": "Digite a Resposta",
+    "en": "Enter the Answer"
+  },
+  {
+    "pt": "Sim",
+    "en": "Yes"
+  },
+  {
+    "pt": "Não",
+    "en": "No"
+  },
+  {
+    "pt": "Tipo do Feedback:",
+    "en": "Feedback Type:"
+  },
+  {
+    "pt": "Tipo do Feedback",
+    "en": "Feedback Type"
+  },
+  {
+    "pt": "Texto",
+    "en": "Text"
+  },
+  {
+    "pt": "Texto do Feedback:",
+    "en": "Feedback Text:"
+  },
+  {
+    "pt": "Digite o Feedback",
+    "en": "Enter the Feedback"
+  },
+  {
+    "pt": "Adicionar Imagem",
+    "en": "Add Image"
+  },
+  {
+    "pt": "Insira uma URL válida para a imagem",
+    "en": "Enter a valid URL for the image"
+  },
+  {
+    "pt": "Link do Feedback:",
+    "en": "Feedback Link:"
+  },
+  {
+    "pt": "Digite um Link https",
+    "en": "Enter an https Link"
+  },
+  {
+    "pt": "Testar",
+    "en": "Test"
+  },
+  {
+    "pt": "Link do Youtube:",
+    "en": "YouTube Link:"
+  },
+  {
+    "pt": "Digite um Link do Youtube",
+    "en": "Enter a YouTube Link"
+  },
+  {
+    "pt": "Criar Pergunta",
+    "en": "Create Question"
+  },
+  {
+    "pt": "A Pergunta é obrigatória.",
+    "en": "The Question is required."
+  },
+  {
+    "pt": "A Reposta Positiva é obrigatória.",
+    "en": "The Positive Response is required."
+  },
+  {
+    "pt": "A Reposta Positiva deve ter até 15 caracteres.",
+    "en": "The Positive Response must be up to 15 characters."
+  },
+  {
+    "pt": "A Reposta Negativa é obrigatória.",
+    "en": "The Negative Response is required."
+  },
+  {
+    "pt": "A Reposta Negativa deve ter até 15 caracteres.",
+    "en": "The Negative Response must be up to 15 characters."
+  },
+  {
+    "pt": "O tipo de Feedback é obrigatório.",
+    "en": "The Feedback Type is required."
+  },
+  {
+    "pt": "O Feedback é obrigatório.",
+    "en": "The Feedback is required."
+  },
+  {
+    "pt": "* Erro ao criar a pergunta. Tente novamente.",
+    "en": "* Error creating the question. Please try again."
+  },
+  {
+    "pt": "Copiado!",
+    "en": "Copied!"
+  }
+]
