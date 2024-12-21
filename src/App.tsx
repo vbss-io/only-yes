@@ -1,4 +1,5 @@
 import { registerDependencies } from "@/infra/dependency-injection/Register";
+import translations from "@/presentation/assets/translations.json";
 import { Footer } from "@/presentation/components/Footer";
 import { Header } from "@/presentation/components/Header";
 import { Loading } from "@/presentation/components/Loading";
@@ -8,6 +9,7 @@ import { Create } from "@/presentation/pages/Create";
 import { Home } from "@/presentation/pages/Home";
 import { Redirect } from "@/presentation/pages/Redirect";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { TranslatorProvider } from "vbss-translator";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +28,17 @@ function App() {
 
   return (
     <DarkModeProvider>
-      <Root>
-        <Header />
-        <RouterProvider router={router} fallbackElement={<Loading />} />
-        <Footer />
-      </Root>
+      <TranslatorProvider
+        translations={translations}
+        autoDetectLanguage
+        persist
+      >
+        <Root>
+          <Header />
+          <RouterProvider router={router} fallbackElement={<Loading />} />
+          <Footer />
+        </Root>
+      </TranslatorProvider>
     </DarkModeProvider>
   );
 }
