@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, Pen } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslator } from "vbss-translator";
 import { Input } from "vbss-ui";
 import { z } from "zod";
 import * as S from "./styles";
@@ -57,6 +58,7 @@ const createQuestionForm = z.object({
 type CreateQuestionForm = z.infer<typeof createQuestionForm>;
 
 export const Create = () => {
+  const { t } = useTranslator();
   const [questionContent, setQuestionContent] = useState<string>("");
   const [answerType, setAnswerType] = useState<string>("text");
   const [answerContent, setAnswerContent] = useState<string>("");
@@ -67,8 +69,8 @@ export const Create = () => {
     useForm<CreateQuestionForm>({
       resolver: zodResolver(createQuestionForm),
       defaultValues: {
-        yesText: "Sim",
-        noText: "Não",
+        yesText: t("Sim"),
+        noText: t("Não"),
       },
     });
 
@@ -94,12 +96,12 @@ export const Create = () => {
       setIsLoading(false);
     } catch (error) {
       console.error(error);
-      setError("* Erro ao criar a pergunta. Tente novamente.");
+      setError(t("* Erro ao criar a pergunta. Tente novamente."));
     }
   };
 
   const typeValues = [
-    { label: "Texto", value: "text" },
+    { label: t("Texto"), value: "text" },
     { label: "Link", value: "link" },
     { label: "Youtube", value: "video" },
   ];
@@ -110,36 +112,45 @@ export const Create = () => {
       <S.Card>
         <S.Header>
           <Pen />
-          <h1>Crie Sua Pergunta</h1>
+          <h1>{t("Crie Sua Pergunta")}</h1>
         </S.Header>
         <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
           <div>
             <Editor
               content={questionContent}
               setContent={setQuestionContent}
-              label="Pergunta:"
-              placeholder="Digite a Pergunta"
-              error={formState.errors.question?.message}
+              label={t("Pergunta:")}
+              placeholder={t("Digite a Pergunta")}
+              error={
+                formState.errors.question?.message &&
+                t(formState.errors.question?.message)
+              }
             />
           </div>
           <S.Answers>
             <Input
-              label="Resposta Positiva:"
+              label={t("Resposta Positiva:")}
               {...register("yesText")}
-              placeholder="Digite a Resposta"
-              error={formState.errors.yesText?.message}
+              placeholder={t("Digite a Resposta")}
+              error={
+                formState.errors.yesText?.message &&
+                t(formState.errors.yesText?.message)
+              }
             />
             <Input
-              label="Resposta Negativa:"
+              label={t("Resposta Negativa:")}
               {...register("noText")}
-              placeholder="Digite a Resposta"
-              error={formState.errors.noText?.message}
+              placeholder={t("Digite a Resposta")}
+              error={
+                formState.errors.noText?.message &&
+                t(formState.errors.noText?.message)
+              }
             />
           </S.Answers>
           <div>
             <S.SelectContainer>
               <S.SelectLabel htmlFor="answerType">
-                Tipo do Feedback:
+                {t("Tipo do Feedback:")}
               </S.SelectLabel>
               <S.Select
                 id="answerType"
@@ -151,7 +162,7 @@ export const Create = () => {
                 }}
               >
                 <option value="" disabled>
-                  Tipo do Feedback
+                  {t("Tipo do Feedback")}
                 </option>
                 {typeValues.map((value, index) => (
                   <option
@@ -170,17 +181,20 @@ export const Create = () => {
               <Editor
                 content={answerContent}
                 setContent={setAnswerContent}
-                label="Texto do Feedback:"
-                placeholder="Digite o Feedback"
-                error={formState.errors.answer?.message}
+                label={t("Texto do Feedback:")}
+                placeholder={t("Digite o Feedback")}
+                error={
+                  formState.errors.answer?.message &&
+                  t(formState.errors.answer?.message)
+                }
               />
             </div>
           )}
           {answerType === "link" && (
             <S.LinkContainer>
               <Input
-                label="Link do Feedback:"
-                placeholder="Digite um Link https"
+                label={t("Link do Feedback:")}
+                placeholder={t("Digite um Link https")}
                 rounded="full"
                 value={answerContent}
                 onChange={(e) =>
@@ -192,7 +206,7 @@ export const Create = () => {
                   children: (
                     <>
                       <Link color="white" width="1.3rem" height="1.3rem" />
-                      Testar
+                      {t("Testar")}
                     </>
                   ),
                   disabled: !answerContent,
@@ -206,8 +220,8 @@ export const Create = () => {
           {answerType === "video" && (
             <S.LinkContainer>
               <Input
-                label="Link do Youtube:"
-                placeholder="Digite um Link do Youtube"
+                label={t("Link do Youtube:")}
+                placeholder={t("Digite um Link do Youtube")}
                 rounded="full"
                 value={answerContent}
                 onChange={(e) =>
@@ -227,7 +241,7 @@ export const Create = () => {
             {error && <S.SubmitErrorMessage>{error}</S.SubmitErrorMessage>}
             {questionCode && <Share code={questionCode} />}
             <S.SubmitButton type="submit" rounded="full">
-              {isLoading ? <Loading /> : "Criar Pergunta"}
+              {isLoading ? <Loading /> : t("Criar Pergunta")}
             </S.SubmitButton>
           </S.SubmitContainer>
         </S.Form>

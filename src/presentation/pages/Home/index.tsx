@@ -4,9 +4,11 @@ import { Loading } from "@/presentation/components/Loading";
 import { Question } from "@/presentation/components/Question";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslator } from "vbss-translator";
 import * as S from "./styles";
 
 export const Home = () => {
+  const { t } = useTranslator();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [question, setQuestion] = useState<QuestionModel>();
   const { state } = useLocation() as {
@@ -37,10 +39,10 @@ export const Home = () => {
       <title>Only Yes {question ? `- ${question.code}` : ""}</title>
       {isLoading && <Loading />}
       {!isLoading && state?.code && !question && (
-        <S.Text>Nenhuma pergunta encontrada.</S.Text>
+        <S.Text>{t("Nenhuma pergunta encontrada.")}</S.Text>
       )}
       {!isLoading && !question && (
-        <S.Button href="/create">Criar sua primeira pergunta</S.Button>
+        <S.Button href="/create">{t("Criar sua primeira pergunta")}</S.Button>
       )}
       {!isLoading && question && <Question question={question} />}
     </S.Container>

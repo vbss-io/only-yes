@@ -21,6 +21,7 @@ import {
 } from "@phosphor-icons/react";
 import { Editor } from "@tiptap/react";
 import { useState } from "react";
+import { useTranslator } from "vbss-translator";
 import { Input } from "vbss-ui";
 import * as S from "./styles";
 
@@ -29,6 +30,7 @@ interface EditorMenuProps {
 }
 
 export const EditorMenu = ({ editor }: EditorMenuProps) => {
+  const { t } = useTranslator();
   const [imageUrl, setImageUrl] = useState("");
 
   const addImage = () => {
@@ -243,8 +245,8 @@ export const EditorMenu = ({ editor }: EditorMenuProps) => {
       </S.Button>
       <S.Dialog
         id="addImageModal"
-        title="Adicionar Imagem"
-        description="Insira uma URL válida para a imagem"
+        title={t("Adicionar Imagem")}
+        description={t("Insira uma URL válida para a imagem")}
         trigger={
           <S.Button
             as="div"

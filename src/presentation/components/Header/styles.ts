@@ -1,5 +1,8 @@
 import { styled } from "@/presentation/config/stitches.config";
-import { Button as ButtonComponent } from "vbss-ui";
+import {
+  Button as ButtonComponent,
+  DropdownMenu as DropdownMenuComponent,
+} from "vbss-ui";
 
 export const Nav = styled("nav", {
   backgroundColor: "$text",
@@ -41,13 +44,32 @@ export const Actions = styled("div", {
   gap: "1rem",
 });
 
-export const Button = styled(ButtonComponent, {
+export const DropdownMenu = styled(DropdownMenuComponent, {
+  minWidth: "1.5rem !important",
+  padding: "0.5rem",
+  backgroundColor: "white",
+});
+
+export const Language = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  cursor: "pointer",
+
+  svg: {
+    width: "1.5rem",
+    height: "1.5rem",
+  },
+});
+
+export const DesktopButton = styled(ButtonComponent, {
   padding: "0.5rem 1rem",
   background: "linear-gradient(to right, #EC4899, #A855F7)",
   color: "white",
   borderRadius: "9999px",
   transition: "all 0.3s",
   transform: "scale(1)",
+  display: "none",
 
   "&:hover": {
     background: "linear-gradient(to right, #DB2777, #9333EA)",
@@ -55,13 +77,19 @@ export const Button = styled(ButtonComponent, {
   },
 
   "&:after": {
-    content: "Criar",
+    content: "var(--create)",
   },
 
   "@xsm": {
+    display: "flex",
     justifyContent: "space-between",
-    "&:after": {
-      content: "Criar Pergunta",
-    },
+  },
+});
+
+export const MobileButton = styled(DesktopButton, {
+  display: "flex",
+
+  "@xsm": {
+    display: "none",
   },
 });
