@@ -2635,10 +2635,10 @@ use-sync-external-store@^1.2.2:
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.2.tgz#c3b6390f3a30eba13200d2302dcdf1e7b57b2ef9"
   integrity sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==
 
-vbss-translator@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vbss-translator/-/vbss-translator-1.0.1.tgz#2ff288849ee2692535f6b448b425aeeb79cd82dc"
-  integrity sha512-R1rhJEFpA9WbdjkFYgVMhxmHOH/C6rSzZUIdKZDszx+FbCIlYK8ZvElXZz9pSUa17vRi3JGG3LME5Ah0VYxD0g==
+vbss-translator@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vbss-translator/-/vbss-translator-1.0.2.tgz#1909e9659f80be8963f52eeb2d7162b6b40a2c2c"
+  integrity sha512-j8bjAh4UAAEnKvWZIWlEDBAJyIiIqtAV7TXsJ0/OX9/fhi+xDbs/MvSCiBypifESrDN9qE3seK/O8JIu2ZubUg==
   dependencies:
     react "^18.3.1"
     react-dom "^18.3.1"
