@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 *.env
+
+# AI
+.cursor/
+templates/
+tasks/
+docs/
+project-base.md

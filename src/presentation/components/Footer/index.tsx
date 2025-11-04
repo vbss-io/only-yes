@@ -4,15 +4,37 @@ import { Button } from "vbss-ui";
 import * as S from "./styles";
 
 export const Footer = () => {
-  const { t } = useTranslator();
+  const { t, language } = useTranslator();
+
   return (
     <S.Container>
-      <S.CreatedBy>
-        {t("Criado por")}{" "}
-        <a href="https://vbss.io" target="_blank">
-          Vitor Bastos
-        </a>
-      </S.CreatedBy>
+      <S.Text>
+        {"Only Yes"}. {t("A")}{" "}
+        {language === "pt" ? (
+          <>
+            {t("project")}{" "}
+            <S.Link
+              href="https://vbss.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              vbss.io
+            </S.Link>
+            .
+          </>
+        ) : (
+          <>
+            <S.Link
+              href="https://vbss.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              vbss.io
+            </S.Link>{" "}
+            {t("project")}.
+          </>
+        )}
+      </S.Text>
       <S.ContactContainer>
         <Button
           size="icon-md"

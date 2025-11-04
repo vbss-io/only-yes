@@ -21,6 +21,16 @@ Acesse o aplicativo em [yes.vbss.io](https://yes.vbss.io)
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests neste repositório.  
 
+## 💝 Suporte
+
+Gostou do projeto? Então considere apoiar-me com um café:
+
+- Buy me a coffee: [buymeacoffee.com/vbss.io](https://www.buymeacoffee.com/vbss.io)
+- Dê uma estrela no GitHub: [github.com/vbss-io/only-yes](https://github.com/vbss-io/only-yes)
+- Compartilhe com a comunidade: [yes.vbss.io](https://yes.vbss.io)
+
+Obrigado por apoiar o projeto!
+
 ## 🎯 Inspiração  
 
 Este projeto foi inspirado por um [Reels do Instagram](https://www.instagram.com/reel/C5RkV69g5GF)

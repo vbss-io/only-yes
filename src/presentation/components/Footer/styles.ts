@@ -25,14 +25,15 @@ export const Container = styled("div", {
   },
 });
 
-export const CreatedBy = styled("div", {
+export const Text = styled("div", {
   fontSize: "1rem",
   color: "$background",
+});
 
-  a: {
-    fontWeight: 700,
-    textDecoration: "underline",
-  },
+export const Link = styled("a", {
+  fontWeight: 700,
+  textDecoration: "underline",
+  color: "$background",
 });
 
 export const ContactContainer = styled("div", {
@@ -41,5 +42,10 @@ export const ContactContainer = styled("div", {
 
   "@xsm": {
     padding: "1rem",
+    paddingRight: "6rem",
+  },
+
+  "@lg": {
+    paddingRight: "1rem",
   },
 });
