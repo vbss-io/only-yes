@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yes.vbss.io/sitemap.xml
+Sitemap: https://www.yes.vbss.io/sitemap.xml
