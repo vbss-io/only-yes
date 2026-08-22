@@ -1,5 +1,6 @@
 import { GetQuestion } from "@/application/usecases/GetQuestion";
 import { Question as QuestionModel } from "@/domain/models/Question";
+import { Landing } from "@/presentation/components/Landing";
 import { Loading } from "@/presentation/components/Loading";
 import { Question } from "@/presentation/components/Question";
 import { useEffect, useState } from "react";
@@ -41,9 +42,7 @@ export const Home = () => {
       {!isLoading && state?.code && !question && (
         <S.Text>{t("Nenhuma pergunta encontrada.")}</S.Text>
       )}
-      {!isLoading && !question && (
-        <S.Button href="/create">{t("Criar sua primeira pergunta")}</S.Button>
-      )}
+      {!isLoading && !question && <Landing />}
       {!isLoading && question && <Question question={question} />}
     </S.Container>
   );
