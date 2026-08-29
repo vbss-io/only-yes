@@ -35,7 +35,7 @@ const createQuestionForm = z.object({
     .string({
       required_error: "A Reposta Positiva é obrigatória.",
     })
-    .min(3, {
+    .min(1, {
       message: "A Reposta Positiva é obrigatória.",
     })
     .max(15, {
@@ -45,7 +45,7 @@ const createQuestionForm = z.object({
     .string({
       required_error: "A Reposta Negativa é obrigatória.",
     })
-    .min(3, {
+    .min(1, {
       message: "A Reposta Negativa é obrigatória.",
     })
     .max(15, {
