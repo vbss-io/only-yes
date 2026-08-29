@@ -218,5 +218,225 @@
   {
     "pt": "Pronto pra começar?",
     "en": "Ready to start?"
+  },
+  {
+    "pt": "Tenta de novo",
+    "en": "Try again"
+  },
+  {
+    "pt": "Quase!",
+    "en": "Almost!"
+  },
+  {
+    "pt": "Aqui não",
+    "en": "Not here"
+  },
+  {
+    "pt": "Tá lento hoje?",
+    "en": "Slow today?"
+  },
+  {
+    "pt": "Desiste logo",
+    "en": "Just give up"
+  },
+  {
+    "pt": "Redirecionando",
+    "en": "Redirecting"
+  },
+  {
+    "pt": "O Não fugiu",
+    "en": "The No dodged"
+  },
+  {
+    "pt": "Nem tentei fugir",
+    "en": "Did not even try to run"
+  },
+  {
+    "pt": "Tentei fugir",
+    "en": "Tried to escape"
+  },
+  {
+    "pt": "de resistência",
+    "en": "of resistance"
+  },
+  {
+    "pt": "crie a sua em",
+    "en": "create yours at"
+  },
+  {
+    "pt": "Seu recibo do Sim",
+    "en": "Your Yes receipt"
+  },
+  {
+    "pt": "Ver recibo do Sim",
+    "en": "See your Yes receipt"
+  },
+  {
+    "pt": "Recibo do Sim",
+    "en": "Yes receipt"
+  },
+  {
+    "pt": "Compartilhar",
+    "en": "Share"
+  },
+  {
+    "pt": "Baixar",
+    "en": "Download"
+  },
+  {
+    "pt": "Sim de primeira",
+    "en": "Instant Yes"
+  },
+  {
+    "pt": "Resistência simbólica",
+    "en": "Symbolic resistance"
+  },
+  {
+    "pt": "Lutou mas caiu",
+    "en": "Fought but fell"
+  },
+  {
+    "pt": "Teimosia certificada",
+    "en": "Certified stubbornness"
+  },
+  {
+    "pt": "Recorde de fuga",
+    "en": "Escape record"
+  },
+  {
+    "pt": "Agora é sua vez de conseguir um Sim",
+    "en": "Now it is your turn to get a Yes"
+  },
+  {
+    "pt": "Pedido de namoro",
+    "en": "Ask them out"
+  },
+  {
+    "pt": "Bora sair",
+    "en": "Hang out"
+  },
+  {
+    "pt": "Zoeira",
+    "en": "Just for laughs"
+  },
+  {
+    "pt": "Quer namorar comigo?",
+    "en": "Will you go out with me?"
+  },
+  {
+    "pt": "Eu sabia que você ia dizer sim.",
+    "en": "I knew you would say yes."
+  },
+  {
+    "pt": "Bora sair sábado?",
+    "en": "Hang out this Saturday?"
+  },
+  {
+    "pt": "Fechado, sábado então.",
+    "en": "It is a date. Saturday then."
+  },
+  {
+    "pt": "Você admite que eu estava certo?",
+    "en": "Do you admit I was right?"
+  },
+  {
+    "pt": "Print tirado. Sem volta.",
+    "en": "Screenshot taken. No takebacks."
+  },
+  {
+    "pt": "Bora",
+    "en": "Let's go"
+  },
+  {
+    "pt": "Não dá",
+    "en": "Can't"
+  },
+  {
+    "pt": "Admito",
+    "en": "I admit it"
+  },
+  {
+    "pt": "Nunca",
+    "en": "Never"
+  },
+  {
+    "pt": "agora",
+    "en": "now"
+  },
+  {
+    "pt": "há",
+    "en": "ago:"
+  },
+  {
+    "pt": "criada",
+    "en": "created"
+  },
+  {
+    "pt": "Sims conquistados",
+    "en": "Yeses earned"
+  },
+  {
+    "pt": "Recorde de fugas",
+    "en": "Dodge record"
+  },
+  {
+    "pt": "Tempo médio até o Sim",
+    "en": "Average time to Yes"
+  },
+  {
+    "pt": "Nãos bem-sucedidos",
+    "en": "Successful Nos"
+  },
+  {
+    "pt": "Últimas respostas",
+    "en": "Latest answers"
+  },
+  {
+    "pt": "Ninguém respondeu ainda. Compartilhe o link!",
+    "en": "No one answered yet. Share the link!"
+  },
+  {
+    "pt": "disse Sim de primeira",
+    "en": "said Yes right away"
+  },
+  {
+    "pt": "fugiu",
+    "en": "dodged"
+  },
+  {
+    "pt": "antes do Sim",
+    "en": "before the Yes"
+  },
+  {
+    "pt": "clicou num clone",
+    "en": "clicked a clone"
+  },
+  {
+    "pt": "Minhas perguntas",
+    "en": "My questions"
+  },
+  {
+    "pt": "Stats indisponíveis: link secreto inválido ou pergunta criada antes do painel existir.",
+    "en": "Stats unavailable: invalid secret link or question created before this panel existed."
+  },
+  {
+    "pt": "Erro ao carregar. Tente novamente.",
+    "en": "Error loading. Please try again."
+  },
+  {
+    "pt": "Tenho uma pergunta importante pra você…",
+    "en": "I have an important question for you…"
+  },
+  {
+    "pt": "Link secreto: acompanhe as respostas",
+    "en": "Secret link: track the answers"
+  },
+  {
+    "pt": "Guarde este link — sem ele não dá pra recuperar os stats.",
+    "en": "Keep this link — without it there is no way to recover your stats."
+  },
+  {
+    "pt": "Link público pra compartilhar",
+    "en": "Public link to share"
   }
 ]

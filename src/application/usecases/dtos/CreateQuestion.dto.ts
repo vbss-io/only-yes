@@ -8,4 +8,5 @@ export interface CreateQuestionInput {
 
 export interface CreateQuestionOutput {
   code: string;
+  statsKey?: string;
 }

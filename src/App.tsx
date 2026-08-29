@@ -8,6 +8,7 @@ import { DarkModeProvider } from "@/presentation/contexts/dark-mode-context.tsx"
 import { Create } from "@/presentation/pages/Create";
 import { Home } from "@/presentation/pages/Home";
 import { Redirect } from "@/presentation/pages/Redirect";
+import { Stats } from "@/presentation/pages/Stats";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { TranslatorProvider } from "vbss-translator";
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/create",
     element: <Create />,
+  },
+  {
+    path: "/stats/:code",
+    element: <Stats />,
   },
   { path: "*", element: <Redirect /> },
 ]);

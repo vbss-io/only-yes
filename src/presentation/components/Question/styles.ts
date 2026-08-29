@@ -1,22 +1,6 @@
 import { keyframes, styled } from "@/presentation/config/stitches.config";
 import { Button as ButtonComponent } from "vbss-ui";
 
-export const shake = keyframes({
-  "0%, 100%": { transform: "translateX(0)" },
-  "25%": { transform: "translateX(-10px)" },
-  "75%": { transform: "translateX(10px)" },
-});
-
-export const bounce = keyframes({
-  "0%, 100%": { transform: "translateY(0)" },
-  "50%": { transform: "translateY(-10px)" },
-});
-
-export const spin = keyframes({
-  "0%": { transform: "rotate(0deg)" },
-  "100%": { transform: "rotate(360deg)" },
-});
-
 export const grow = keyframes({
   "0%": { transform: "scale(0)" },
   "75%": { transform: "scale(1.2)" },
@@ -52,13 +36,6 @@ export const Card = styled("div", {
   },
 });
 
-export const Question = styled("p", {
-  fontSize: "1.2rem",
-  lineHeight: "1.25rem",
-  marginBottom: "1.5rem",
-  textAlign: "center",
-});
-
 export const ButtonContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
@@ -86,20 +63,106 @@ export const Button = styled(ButtonComponent, {
           background: "linear-gradient(to right, #10B981, #059669)",
         },
       },
-      no: {
-        background: "linear-gradient(to right, #F87171, #EF4444)",
+    },
+  },
+});
+
+export const NoButton = styled(ButtonComponent, {
+  minWidth: "8rem",
+  maxWidth: "10rem",
+  height: "3.5rem",
+  borderRadius: "10rem",
+  border: "none",
+  fontSize: "1rem",
+  background: "linear-gradient(to right, #F87171, #EF4444)",
+  touchAction: "none",
+
+  variants: {
+    fled: {
+      true: {
+        position: "fixed",
+        left: 0,
+        top: 0,
+        margin: 0,
         zIndex: 9999,
-      },
-      extraYes: {
-        position: "absolute",
-        animation: `${grow} 0.5s ease-in-out`,
-        background: "linear-gradient(to right, #34D399, #10B981)",
-        "&:hover": {
-          background: "linear-gradient(to right, #10B981, #059669)",
-        },
+        willChange: "transform",
+        maxWidth: "none",
       },
     },
   },
+});
+
+export const ButtonSlot = styled("span", {
+  display: "inline-block",
+  minWidth: "8rem",
+  height: "3.5rem",
+});
+
+export const TauntBubble = styled("div", {
+  position: "fixed",
+  left: 0,
+  top: 0,
+  zIndex: 10000,
+  opacity: 0,
+  transition: "opacity 0.2s",
+  pointerEvents: "none",
+  willChange: "transform",
+  backgroundColor: "white",
+  color: "#1F2937",
+  padding: "0.4rem 0.9rem",
+  borderRadius: "0.75rem",
+  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+  fontSize: "0.9rem",
+  fontWeight: 600,
+  whiteSpace: "nowrap",
+});
+
+export const CloneButton = styled(ButtonComponent, {
+  position: "fixed",
+  left: 0,
+  top: 0,
+  zIndex: 9998,
+  willChange: "transform",
+  minWidth: "8rem",
+  height: "3.5rem",
+  borderRadius: "10rem",
+  border: "none",
+  fontSize: "1rem",
+  padding: 0,
+  background: "transparent",
+
+  "&:hover": {
+    background: "transparent",
+  },
+});
+
+export const CloneInner = styled("span", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  borderRadius: "10rem",
+  background: "linear-gradient(to right, #34D399, #10B981)",
+  animation: `${grow} 0.4s ease-out backwards`,
+  transition: "transform 0.2s",
+
+  "@media (prefers-reduced-motion: reduce)": {
+    animation: "none",
+  },
+
+  "&:hover": {
+    background: "linear-gradient(to right, #10B981, #059669)",
+    transform: "scale(1.05)",
+  },
+});
+
+export const ResultStack = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: "1.5rem",
+  width: "100%",
 });
 
 export const RedirectContainer = styled("div", {

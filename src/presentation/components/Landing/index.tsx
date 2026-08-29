@@ -1,3 +1,5 @@
+import { burstConfetti } from "@/presentation/chase/confetti";
+import { useChase } from "@/presentation/hooks/use-chase";
 import {
   CursorClick,
   LinkSimple,
@@ -7,28 +9,28 @@ import {
   TextT,
   YoutubeLogo,
 } from "@phosphor-icons/react";
-import { useRef, useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { useTranslator } from "vbss-translator";
 import * as S from "./styles";
 
 export const Landing = () => {
   const { t } = useTranslator();
-  const demoCardRef = useRef<HTMLDivElement>(null);
-  const [noPosition, setNoPosition] = useState<{
-    top: number;
-    left: number;
-  }>();
   const [saidYes, setSaidYes] = useState(false);
+  const chase = useChase({ mode: "container", active: !saidYes });
 
-  const handleNoDodge = () => {
-    const card = demoCardRef.current;
-    if (!card) return;
-    const maxLeft = card.clientWidth - 130;
-    const maxTop = card.clientHeight - 60;
-    setNoPosition({
-      top: Math.random() * maxTop,
-      left: Math.random() * maxLeft,
-    });
+  const taunts = [
+    t("Tenta de novo"),
+    t("Quase!"),
+    t("Aqui não"),
+    t("Tá lento hoje?"),
+    t("Desiste logo"),
+  ];
+
+  const handleYesClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    if (saidYes) return;
+    chase.stop();
+    burstConfetti(event.clientX, event.clientY);
+    setSaidYes(true);
   };
 
   const steps = [
@@ -95,39 +97,52 @@ export const Landing = () => {
       </S.Hero>
       <S.Section>
         <S.SectionTitle>{t("Tente dizer Não")}</S.SectionTitle>
-        <S.DemoCard ref={demoCardRef}>
+        <S.DemoCard ref={chase.containerRef}>
           {!saidYes && (
             <>
               <S.DemoQuestion>
                 {t("Está gostando do Only Yes?")}
               </S.DemoQuestion>
               <S.DemoButtons>
-                <S.DemoButton variant="yes" onClick={() => setSaidYes(true)}>
+                <S.DemoButton variant="yes" onClick={handleYesClick}>
                   {t("Sim")}
                 </S.DemoButton>
+                {chase.fled && <S.DemoSlot />}
                 <S.DemoButton
+                  ref={chase.noButtonRef}
                   variant="no"
-                  onMouseEnter={handleNoDodge}
-                  onTouchStart={handleNoDodge}
-                  onClick={handleNoDodge}
-                  style={
-                    noPosition
-                      ? {
-                          position: "absolute",
-                          top: `${noPosition.top}px`,
-                          left: `${noPosition.left}px`,
-                        }
-                      : undefined
-                  }
+                  fled={chase.fled}
+                  onPointerEnter={chase.handleNoThreat}
+                  onPointerDown={chase.handleNoThreat}
+                  onClick={chase.handleNoThreat}
                 >
                   {t("Não")}
                 </S.DemoButton>
               </S.DemoButtons>
+              {chase.act.tauntIndex !== null && !chase.reducedMotion && (
+                <S.DemoTaunt ref={chase.bubbleRef}>
+                  {taunts[chase.act.tauntIndex]}
+                </S.DemoTaunt>
+              )}
+              {chase.clones.map((index) => (
+                <S.DemoClone
+                  key={index}
+                  ref={chase.setCloneRef(index)}
+                  onClick={handleYesClick}
+                >
+                  <S.DemoCloneInner>{t("Sim")}</S.DemoCloneInner>
+                </S.DemoClone>
+              ))}
             </>
           )}
           {saidYes && (
             <S.DemoResult>
               {t("Sabia que você ia dizer Sim.")}
+              {chase.dodges > 0 && (
+                <span>
+                  {t("O Não fugiu")} {chase.dodges}x.
+                </span>
+              )}
             </S.DemoResult>
           )}
         </S.DemoCard>

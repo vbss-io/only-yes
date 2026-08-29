@@ -1,11 +1,15 @@
 import { CreateQuestion } from "@/application/usecases/CreateQuestion";
+import { saveCreatedQuestion } from "@/infra/storage/CreatedQuestions";
 import { Editor } from "@/presentation/components/Editor";
 import { Loading } from "@/presentation/components/Loading";
 import { Share } from "@/presentation/components/Share";
+import { findQuestionTemplate } from "@/presentation/config/question-templates";
+import { htmlToText } from "@/presentation/utils/html-text";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, Pen } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useSearchParams } from "react-router-dom";
 import { useTranslator } from "vbss-translator";
 import { Input } from "vbss-ui";
 import { z } from "zod";
@@ -59,20 +63,34 @@ type CreateQuestionForm = z.infer<typeof createQuestionForm>;
 
 export const Create = () => {
   const { t } = useTranslator();
-  const [questionContent, setQuestionContent] = useState<string>("");
+  const [searchParams] = useSearchParams();
+  const [template] = useState(() =>
+    findQuestionTemplate(searchParams.get("template"))
+  );
+  const [questionContent, setQuestionContent] = useState<string>(
+    template ? `<p>${t(template.question)}</p>` : ""
+  );
   const [answerType, setAnswerType] = useState<string>("text");
-  const [answerContent, setAnswerContent] = useState<string>("");
+  const [answerContent, setAnswerContent] = useState<string>(
+    template ? `<p>${t(template.answer)}</p>` : ""
+  );
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [questionCode, setQuestionCode] = useState<string>("");
+  const [statsKey, setStatsKey] = useState<string>("");
   const { register, handleSubmit, formState, reset, setValue } =
     useForm<CreateQuestionForm>({
       resolver: zodResolver(createQuestionForm),
       defaultValues: {
-        yesText: t("Sim"),
-        noText: t("Não"),
+        yesText: template ? t(template.yesText) : t("Sim"),
+        noText: template ? t(template.noText) : t("Não"),
       },
     });
+
+  useEffect(() => {
+    if (!template) return;
+    setValue("answerType", "text");
+  }, [template]);
 
   useEffect(() => {
     setValue("question", questionContent);
@@ -84,19 +102,33 @@ export const Create = () => {
 
   const handleSubmitForm = async (data: CreateQuestionForm): Promise<void> => {
     setQuestionCode("");
+    setStatsKey("");
     setError("");
     try {
       setIsLoading(true);
       const createQuestionUsecase = new CreateQuestion();
-      const { code } = await createQuestionUsecase.execute(data);
+      const { code, statsKey: createdStatsKey } =
+        await createQuestionUsecase.execute(data);
       if (code) {
         setQuestionCode(code);
+        if (createdStatsKey) {
+          setStatsKey(createdStatsKey);
+          saveCreatedQuestion({
+            code,
+            statsKey: createdStatsKey,
+            question: htmlToText(data.question),
+            createdAt: new Date().toISOString(),
+          });
+        }
         reset();
+      } else {
+        setError(t("* Erro ao criar a pergunta. Tente novamente."));
       }
       setIsLoading(false);
     } catch (error) {
       console.error(error);
       setError(t("* Erro ao criar a pergunta. Tente novamente."));
+      setIsLoading(false);
     }
   };
 
@@ -211,7 +243,7 @@ export const Create = () => {
                   ),
                   disabled: !answerContent,
                   onClick: () => {
-                    window.open(answerContent, "_blank");
+                    window.open(answerContent, "_blank", "noopener,noreferrer");
                   },
                 }}
               />
@@ -239,7 +271,9 @@ export const Create = () => {
           )}
           <S.SubmitContainer questionCreatedOrError={!!questionCode || !!error}>
             {error && <S.SubmitErrorMessage>{error}</S.SubmitErrorMessage>}
-            {questionCode && <Share code={questionCode} />}
+            {questionCode && (
+              <Share code={questionCode} statsKey={statsKey || undefined} />
+            )}
             <S.SubmitButton type="submit" rounded="full">
               {isLoading ? <Loading /> : t("Criar Pergunta")}
             </S.SubmitButton>
