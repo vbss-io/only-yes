@@ -3,6 +3,7 @@ import { Question as QuestionModel } from "@/domain/models/Question";
 import { Landing } from "@/presentation/components/Landing";
 import { Loading } from "@/presentation/components/Loading";
 import { Question } from "@/presentation/components/Question";
+import { useNoIndex } from "@/presentation/hooks/use-no-index";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslator } from "vbss-translator";
@@ -16,6 +17,7 @@ export const Home = () => {
     state: { code: string };
     pathname: string;
   };
+  useNoIndex(Boolean(state?.code));
 
   useEffect(() => {
     const getQuestion = async () => {

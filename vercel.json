@@ -1,6 +1,17 @@
 {
   "rewrites": [
     {
+      "source": "/:code([A-Za-z0-9]{5})",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(facebookexternalhit|WhatsApp|Twitterbot|TelegramBot|Discordbot|LinkedInBot|Slackbot).*"
+        }
+      ],
+      "destination": "/api/share?code=:code"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }

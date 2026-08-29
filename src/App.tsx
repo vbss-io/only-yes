@@ -7,6 +7,8 @@ import { Root } from "@/presentation/config/stitches.config";
 import { DarkModeProvider } from "@/presentation/contexts/dark-mode-context.tsx";
 import { Create } from "@/presentation/pages/Create";
 import { Home } from "@/presentation/pages/Home";
+import { Occasion } from "@/presentation/pages/Occasion";
+import { Occasions } from "@/presentation/pages/Occasions";
 import { Redirect } from "@/presentation/pages/Redirect";
 import { Stats } from "@/presentation/pages/Stats";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -24,6 +26,22 @@ const router = createBrowserRouter([
   {
     path: "/stats/:code",
     element: <Stats />,
+  },
+  {
+    path: "/modelos",
+    element: <Occasions />,
+  },
+  {
+    path: "/modelos/:slug",
+    element: <Occasion />,
+  },
+  {
+    path: "/templates",
+    element: <Occasions />,
+  },
+  {
+    path: "/templates/:slug",
+    element: <Occasion />,
   },
   { path: "*", element: <Redirect /> },
 ]);

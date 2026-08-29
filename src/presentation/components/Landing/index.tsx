@@ -1,5 +1,8 @@
-import { burstConfetti } from "@/presentation/chase/confetti";
-import { useChase } from "@/presentation/hooks/use-chase";
+import { ChaseDemo } from "@/presentation/components/ChaseDemo";
+import {
+  galleryPath,
+  resolveOccasionLang,
+} from "@/presentation/config/occasions";
 import {
   CursorClick,
   LinkSimple,
@@ -9,29 +12,12 @@ import {
   TextT,
   YoutubeLogo,
 } from "@phosphor-icons/react";
-import { useState, type MouseEvent } from "react";
 import { useTranslator } from "vbss-translator";
 import * as S from "./styles";
 
 export const Landing = () => {
-  const { t } = useTranslator();
-  const [saidYes, setSaidYes] = useState(false);
-  const chase = useChase({ mode: "container", active: !saidYes });
-
-  const taunts = [
-    t("Tenta de novo"),
-    t("Quase!"),
-    t("Aqui não"),
-    t("Tá lento hoje?"),
-    t("Desiste logo"),
-  ];
-
-  const handleYesClick = (event: MouseEvent<HTMLButtonElement>): void => {
-    if (saidYes) return;
-    chase.stop();
-    burstConfetti(event.clientX, event.clientY);
-    setSaidYes(true);
-  };
+  const { t, language } = useTranslator();
+  const modelsPath = galleryPath(resolveOccasionLang(language));
 
   const steps = [
     {
@@ -92,60 +78,21 @@ export const Landing = () => {
           <S.CtaButton as="a" href="/create">
             {t("Criar Pergunta")}
           </S.CtaButton>
+          <S.SecondaryLink href={modelsPath}>
+            {t("Ver modelos prontos")}
+          </S.SecondaryLink>
           <S.CtaHint>{t("Leva menos de um minuto.")}</S.CtaHint>
         </S.HeroActions>
       </S.Hero>
       <S.Section>
         <S.SectionTitle>{t("Tente dizer Não")}</S.SectionTitle>
-        <S.DemoCard ref={chase.containerRef}>
-          {!saidYes && (
-            <>
-              <S.DemoQuestion>
-                {t("Está gostando do Only Yes?")}
-              </S.DemoQuestion>
-              <S.DemoButtons>
-                <S.DemoButton variant="yes" onClick={handleYesClick}>
-                  {t("Sim")}
-                </S.DemoButton>
-                {chase.fled && <S.DemoSlot />}
-                <S.DemoButton
-                  ref={chase.noButtonRef}
-                  variant="no"
-                  fled={chase.fled}
-                  onPointerEnter={chase.handleNoThreat}
-                  onPointerDown={chase.handleNoThreat}
-                  onClick={chase.handleNoThreat}
-                >
-                  {t("Não")}
-                </S.DemoButton>
-              </S.DemoButtons>
-              {chase.act.tauntIndex !== null && !chase.reducedMotion && (
-                <S.DemoTaunt ref={chase.bubbleRef}>
-                  {taunts[chase.act.tauntIndex]}
-                </S.DemoTaunt>
-              )}
-              {chase.clones.map((index) => (
-                <S.DemoClone
-                  key={index}
-                  ref={chase.setCloneRef(index)}
-                  onClick={handleYesClick}
-                >
-                  <S.DemoCloneInner>{t("Sim")}</S.DemoCloneInner>
-                </S.DemoClone>
-              ))}
-            </>
-          )}
-          {saidYes && (
-            <S.DemoResult>
-              {t("Sabia que você ia dizer Sim.")}
-              {chase.dodges > 0 && (
-                <span>
-                  {t("O Não fugiu")} {chase.dodges}x.
-                </span>
-              )}
-            </S.DemoResult>
-          )}
-        </S.DemoCard>
+        <ChaseDemo
+          question={t("Está gostando do Only Yes?")}
+          yesText={t("Sim")}
+          noText={t("Não")}
+          result={t("Sabia que você ia dizer Sim.")}
+          dodgeSuffix={t("O Não fugiu")}
+        />
       </S.Section>
       <S.Section>
         <S.SectionTitle>{t("Como funciona")}</S.SectionTitle>
@@ -179,6 +126,9 @@ export const Landing = () => {
           <S.CtaButton as="a" href="/create">
             {t("Criar Pergunta")}
           </S.CtaButton>
+          <S.SecondaryLink href={modelsPath}>
+            {t("Ver modelos prontos")}
+          </S.SecondaryLink>
         </S.HeroActions>
       </S.Section>
     </S.Container>

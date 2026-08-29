@@ -3,7 +3,10 @@ import { saveCreatedQuestion } from "@/infra/storage/CreatedQuestions";
 import { Editor } from "@/presentation/components/Editor";
 import { Loading } from "@/presentation/components/Loading";
 import { Share } from "@/presentation/components/Share";
-import { findQuestionTemplate } from "@/presentation/config/question-templates";
+import {
+  findOccasionBySlug,
+  occasionCopy,
+} from "@/presentation/config/occasions";
 import { htmlToText } from "@/presentation/utils/html-text";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, Pen } from "@phosphor-icons/react";
@@ -64,15 +67,16 @@ type CreateQuestionForm = z.infer<typeof createQuestionForm>;
 export const Create = () => {
   const { t } = useTranslator();
   const [searchParams] = useSearchParams();
-  const [template] = useState(() =>
-    findQuestionTemplate(searchParams.get("template"))
-  );
+  const [template] = useState(() => {
+    const match = findOccasionBySlug(searchParams.get("template"));
+    return match ? occasionCopy(match.occasion, match.lang) : undefined;
+  });
   const [questionContent, setQuestionContent] = useState<string>(
-    template ? `<p>${t(template.question)}</p>` : ""
+    template ? `<p>${template.question}</p>` : ""
   );
   const [answerType, setAnswerType] = useState<string>("text");
   const [answerContent, setAnswerContent] = useState<string>(
-    template ? `<p>${t(template.answer)}</p>` : ""
+    template ? `<p>${template.answer}</p>` : ""
   );
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -82,8 +86,8 @@ export const Create = () => {
     useForm<CreateQuestionForm>({
       resolver: zodResolver(createQuestionForm),
       defaultValues: {
-        yesText: template ? t(template.yesText) : t("Sim"),
-        noText: template ? t(template.noText) : t("Não"),
+        yesText: template ? template.yesText : t("Sim"),
+        noText: template ? template.noText : t("Não"),
       },
     });
 

@@ -41,7 +41,20 @@ export const Brand = styled("a", {
 
 export const Actions = styled("div", {
   display: "flex",
+  alignItems: "center",
   gap: "1rem",
+});
+
+export const ModelsLink = styled("a", {
+  fontSize: "0.95rem",
+  fontWeight: 600,
+  color: "$primary",
+  textDecoration: "none",
+  whiteSpace: "nowrap",
+
+  "&:hover": {
+    textDecoration: "underline",
+  },
 });
 
 export const DropdownMenu = styled(DropdownMenuComponent, {

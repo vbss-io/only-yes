@@ -5,6 +5,7 @@ import {
   type CreatedQuestion,
 } from "@/infra/storage/CreatedQuestions";
 import { Loading } from "@/presentation/components/Loading";
+import { useNoIndex } from "@/presentation/hooks/use-no-index";
 import { htmlToText } from "@/presentation/utils/html-text";
 import { ArrowsClockwise } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
@@ -35,6 +36,7 @@ export const Stats = () => {
   const [state, setState] = useState<LoadState>("loading");
   const [stats, setStats] = useState<QuestionStats | null>(null);
   const [mine] = useState<CreatedQuestion[]>(() => listCreatedQuestions());
+  useNoIndex(true);
 
   const load = async (): Promise<void> => {
     if (!code || !key) {

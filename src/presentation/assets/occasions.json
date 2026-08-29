@@ -1,0 +1,442 @@
+[
+  {
+    "slug": { "pt": "pedido-de-namoro", "en": "ask-to-date" },
+    "icon": "heart",
+    "pt": {
+      "label": "Pedido de namoro",
+      "title": "Pedido de namoro criativo online",
+      "metaDescription": "Faça um pedido de namoro criativo: uma pergunta onde o botão Não foge do clique. Grátis, sem conta, pronto em um minuto.",
+      "h1": "Pedido de namoro criativo que só aceita Sim",
+      "intro": [
+        "Pedir alguém em namoro por mensagem não precisa ser sem graça. Com o Only Yes você cria uma pergunta de Sim ou Não — \"Quer namorar comigo?\" — e envia um link único pra pessoa. O detalhe: quando ela tentar clicar em Não, o botão foge do cursor. Depois de algumas tentativas ele encolhe, provoca, e a tela vai se enchendo de botões Sim até só restar uma resposta possível.",
+        "No fim, quando a pessoa ceder ao Sim, você mostra a mensagem que escreveu: uma declaração, uma foto de vocês ou até um vídeo. E ela ainda recebe um recibo divertido contando quantas vezes tentou fugir antes de aceitar — perfeito pra postar e marcar o início do namoro.",
+        "Você pode acompanhar tudo por um link secreto: quantas vezes a pessoa tentou dizer Não, quanto tempo resistiu e quando respondeu. É grátis, não precisa de cadastro e leva menos de um minuto pra criar."
+      ],
+      "question": "Quer namorar comigo?",
+      "yesText": "Sim",
+      "noText": "Não",
+      "answer": "Eu sabia que você ia dizer sim.",
+      "faq": [
+        { "q": "É grátis criar o pedido de namoro?", "a": "Sim, totalmente grátis e sem precisar de conta. Você cria a pergunta, recebe um link único e compartilha com quem quiser." },
+        { "q": "A pessoa consegue clicar em Não?", "a": "Não. O botão Não foge do cursor, encolhe e provoca — e botões Sim se multiplicam pela tela até só restar uma resposta." },
+        { "q": "Como sei se a pessoa respondeu?", "a": "Junto com o link público você recebe um link secreto com as estatísticas: quantas vezes tentaram fugir do Sim, quanto tempo resistiram e quando responderam." }
+      ]
+    },
+    "en": {
+      "label": "Ask them out",
+      "title": "Creative way to ask someone to be your girlfriend or boyfriend",
+      "metaDescription": "Ask someone out with a question where the No button runs away from the click. Free, no account, ready in a minute.",
+      "h1": "A creative way to ask someone out that only accepts Yes",
+      "intro": [
+        "Asking someone out over text doesn't have to be boring. With Only Yes you create a Yes or No question — \"Will you go out with me?\" — and send them a unique link. The twist: when they try to click No, the button dodges the cursor. After a few attempts it shrinks, teases them, and the screen slowly fills with Yes buttons until only one answer is possible.",
+        "When they finally give in to the Yes, they see the message you wrote: a declaration, a photo of you two, or even a video. They also get a playful receipt showing how many times they tried to escape before accepting — perfect for posting to mark the moment.",
+        "You can follow everything through a secret link: how many times they tried to say No, how long they resisted and when they answered. It's free, needs no sign-up and takes less than a minute to create."
+      ],
+      "question": "Will you go out with me?",
+      "yesText": "Yes",
+      "noText": "No",
+      "answer": "I knew you would say yes.",
+      "faq": [
+        { "q": "Is it free to create?", "a": "Yes, completely free and no account needed. You create the question, get a unique link and share it with anyone." },
+        { "q": "Can they actually click No?", "a": "No. The No button dodges the cursor, shrinks and teases — while Yes buttons multiply across the screen until only one answer remains." },
+        { "q": "How do I know if they answered?", "a": "Along with the public link you get a secret stats link: how many times they tried to escape the Yes, how long they resisted and when they answered." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "pedido-de-casamento", "en": "marriage-proposal" },
+    "icon": "diamond",
+    "pt": {
+      "label": "Pedido de casamento",
+      "title": "Pedido de casamento criativo online",
+      "metaDescription": "Um pedido de casamento divertido: a pergunta onde o Não foge do clique e só o Sim é possível. Grátis e sem conta.",
+      "h1": "Um pedido de casamento onde o Não não tem chance",
+      "intro": [
+        "Todo pedido de casamento merece uma história pra contar. O Only Yes transforma o \"Quer casar comigo?\" numa brincadeira: a pessoa recebe um link, vê a pergunta e — quando tenta clicar em Não de zoeira — o botão escapa do cursor, encolhe e foge pela tela enquanto botões Sim se multiplicam por todo lado.",
+        "Quando ela clicar no Sim (e vai clicar), aparece a sua mensagem: o pedido por extenso, uma foto do casal ou o vídeo que você preparou. E ela recebe um recibo divertido registrando a rendição — quantas fugas, quanto tempo de resistência — pra guardar de lembrança do dia do pedido.",
+        "Funciona como complemento do pedido real ou como o próprio pedido à distância. É grátis, sem cadastro, e o link fica pronto em um minuto. Você ainda acompanha por um link secreto o momento exato em que a resposta chegou."
+      ],
+      "question": "Quer casar comigo?",
+      "yesText": "Aceito!",
+      "noText": "Não",
+      "answer": "Agora é oficial. Te vejo no altar.",
+      "faq": [
+        { "q": "É grátis criar o pedido?", "a": "Sim, grátis e sem conta. Você escreve a pergunta, personaliza as respostas e recebe um link único na hora." },
+        { "q": "E se a pessoa tentar clicar em Não?", "a": "O botão Não foge, encolhe e provoca. Depois de tantas tentativas, a tela se enche de botões Sim — dizer Não é literalmente impossível." },
+        { "q": "Posso colocar uma foto ou vídeo no pedido?", "a": "Sim. A resposta que aparece depois do Sim aceita texto com formatação, imagens e vídeo do YouTube." }
+      ]
+    },
+    "en": {
+      "label": "Marriage proposal",
+      "title": "Fun online marriage proposal idea",
+      "metaDescription": "A playful marriage proposal: the question where No runs from the click and only Yes is possible. Free, no account.",
+      "h1": "A marriage proposal where No never stood a chance",
+      "intro": [
+        "Every proposal deserves a story worth telling. Only Yes turns \"Will you marry me?\" into a game: your person gets a link, sees the question and — when they jokingly try to click No — the button escapes the cursor, shrinks and runs across the screen while Yes buttons multiply everywhere.",
+        "When they click Yes (and they will), your message appears: the proposal in full, a photo of you two or a video you prepared. They also get a playful receipt of their surrender — how many escapes, how long they resisted — a keepsake from the day of the proposal.",
+        "It works as a companion to the real proposal or as the proposal itself from afar. It's free, has no sign-up, and the link is ready in a minute. A secret link even shows you the exact moment the answer arrived."
+      ],
+      "question": "Will you marry me?",
+      "yesText": "Yes, I do!",
+      "noText": "No",
+      "answer": "It is official. See you at the altar.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and with no account. Write the question, customize the answers and get a unique link instantly." },
+        { "q": "What if they try to click No?", "a": "The No button dodges, shrinks and teases. After enough attempts the screen fills with Yes buttons — saying No is literally impossible." },
+        { "q": "Can I add a photo or video to the proposal?", "a": "Yes. The message revealed after the Yes supports rich text, images and YouTube videos." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "me-perdoa", "en": "apology" },
+    "icon": "hands-praying",
+    "pt": {
+      "label": "Pedido de desculpas",
+      "title": "Pedido de desculpas criativo",
+      "metaDescription": "Peça desculpas de um jeito impossível de recusar: o botão Não foge até sobrar só o perdão. Grátis e sem conta.",
+      "h1": "Um pedido de desculpas impossível de recusar",
+      "intro": [
+        "Pisou na bola? Um pedido de desculpas engraçado desarma qualquer clima pesado. Com o Only Yes você cria a pergunta \"Me perdoa?\" e manda o link: quando a pessoa tentar clicar em Não, o botão foge do dedo dela, encolhe, solta provocações — e a tela vai se enchendo de botões de perdão até ela se render.",
+        "Depois do clique no Sim, entra a sua mensagem: as desculpas de verdade, aquela promessa por escrito ou uma foto que resgata a memória boa. A pessoa ainda ganha um recibo divertido mostrando o quanto \"resistiu\" antes de te perdoar — o que geralmente termina em risada, que é o objetivo.",
+        "É grátis, sem cadastro, e você acompanha pelo link secreto se (e quando) o perdão saiu. Às vezes a melhor forma de dizer \"desculpa\" é fazer a pessoa rir primeiro."
+      ],
+      "question": "Me perdoa?",
+      "yesText": "Perdoo",
+      "noText": "Não",
+      "answer": "Obrigado. Prometo fazer melhor.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta. Criou, compartilhou o link, pronto." },
+        { "q": "E se a pessoa estiver muito brava pra perdoar?", "a": "O botão Não foge, encolhe e provoca até render uma risada — e rir junto costuma ser o primeiro passo do perdão." },
+        { "q": "Posso escrever minhas desculpas completas?", "a": "Sim. Depois do Sim aparece a sua mensagem, com texto formatado, imagens ou vídeo — é o lugar do pedido de desculpas de verdade." }
+      ]
+    },
+    "en": {
+      "label": "Apology",
+      "title": "Creative way to say sorry",
+      "metaDescription": "Apologize in a way that is impossible to refuse: the No button runs away until only forgiveness is left. Free, no account.",
+      "h1": "An apology that is impossible to refuse",
+      "intro": [
+        "Messed up? A funny apology disarms any bad mood. With Only Yes you create the question \"Do you forgive me?\" and send the link: when they try to tap No, the button runs from their finger, shrinks, throws little taunts — and the screen slowly fills with forgiveness buttons until they give in.",
+        "After the Yes, your message appears: the real apology, that promise in writing or a photo that brings back the good memories. They also get a playful receipt showing how much they \"resisted\" before forgiving you — which usually ends in laughter, which is the whole point.",
+        "It's free, has no sign-up, and the secret link shows you if (and when) the forgiveness came through. Sometimes the best way to say sorry is to make them laugh first."
+      ],
+      "question": "Do you forgive me?",
+      "yesText": "I forgive you",
+      "noText": "No",
+      "answer": "Thank you. I will do better, promise.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account. Create it, share the link, done." },
+        { "q": "What if they are too mad to forgive?", "a": "The No button dodges, shrinks and teases until it gets a laugh — and laughing together is usually the first step to forgiveness." },
+        { "q": "Can I write my full apology?", "a": "Yes. After the Yes your message appears, with rich text, images or video — that is the place for the real apology." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "bora-sair", "en": "ask-out" },
+    "icon": "beer",
+    "pt": {
+      "label": "Convite pra sair",
+      "title": "Convite pra sair que ninguém consegue recusar",
+      "metaDescription": "Chame pra sair com uma pergunta onde o Não foge do clique. O jeito mais divertido de marcar o rolê. Grátis.",
+      "h1": "O convite pra sair que não aceita desculpa",
+      "intro": [
+        "Cansado de convite ignorado no grupo? Manda um link do Only Yes: \"Bora sair sábado?\". Quando a pessoa tentar clicar em \"Não dá\", o botão foge do cursor, encolhe e começa a zoar — enquanto botões de \"Bora\" tomam conta da tela. A desculpa esfarrapada não tem a menor chance.",
+        "Quando a pessoa ceder, você revela os detalhes do rolê: lugar, hora, o que levar. E ela recebe um recibo mostrando quantas vezes tentou fugir do compromisso antes de aceitar — material de primeira pra zoar no grupo.",
+        "Grátis, sem cadastro, pronto em um minuto. Pelo link secreto você ainda vê quem enrolou mais pra dizer Sim. Chamar pra sair nunca foi tão eficiente."
+      ],
+      "question": "Bora sair sábado?",
+      "yesText": "Bora",
+      "noText": "Não dá",
+      "answer": "Fechado, sábado então.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta. Cria a pergunta, manda o link e espera o Sim inevitável." },
+        { "q": "E se a pessoa tentar dizer que não dá?", "a": "O botão de recusa foge do clique, encolhe e provoca, enquanto a tela se enche de botões de aceite. Não existe \"não dá\"." },
+        { "q": "Dá pra mandar pra várias pessoas?", "a": "Dá. O mesmo link funciona pra todo mundo, e o seu painel secreto mostra cada resposta — incluindo quem resistiu mais antes de topar." }
+      ]
+    },
+    "en": {
+      "label": "Hang out",
+      "title": "An invite to hang out no one can refuse",
+      "metaDescription": "Invite someone out with a question where the No runs from the click. The most fun way to lock in plans. Free.",
+      "h1": "The hangout invite that takes no excuses",
+      "intro": [
+        "Tired of invites dying in the group chat? Send an Only Yes link: \"Hang out this Saturday?\". When they try to click \"Can't\", the button runs from the cursor, shrinks and starts teasing — while \"Let's go\" buttons take over the screen. Lame excuses don't stand a chance.",
+        "When they give in, you reveal the plan: place, time, what to bring. They also get a receipt showing how many times they tried to dodge the commitment before accepting — prime material for the group chat.",
+        "Free, no sign-up, ready in a minute. The secret link even shows you who stalled the longest before saying Yes. Making plans has never been this efficient."
+      ],
+      "question": "Hang out this Saturday?",
+      "yesText": "Let's go",
+      "noText": "Can't",
+      "answer": "It is a date. Saturday then.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account. Create the question, send the link and wait for the inevitable Yes." },
+        { "q": "What if they try to say they can't?", "a": "The refusal button dodges the click, shrinks and teases, while the screen fills with accept buttons. \"Can't\" is not an option." },
+        { "q": "Can I send it to several people?", "a": "Yes. The same link works for everyone, and your secret panel shows each answer — including who resisted the longest before caving." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "convite-de-festa", "en": "party-invite" },
+    "icon": "confetti",
+    "pt": {
+      "label": "Convite de festa",
+      "title": "Convite de festa interativo e divertido",
+      "metaDescription": "Convite de aniversário ou festa onde é impossível responder que não vai: o botão Não foge do clique. Grátis.",
+      "h1": "O convite de festa que ninguém responde \"não vou\"",
+      "intro": [
+        "Convite de festa por link estático todo mundo ignora. Com o Only Yes, o convidado abre a pergunta \"Você vem na minha festa?\" e, se tentar clicar em \"Não vou\", o botão foge, encolhe e debocha — enquanto a tela se enche de \"Vou!\" até a confirmação sair na marra.",
+        "Depois do Sim, você entrega os detalhes: endereço, data, horário, tema, o que levar. Aceita texto formatado, imagem do convite e até vídeo. E o convidado leva um recibo divertido da própria rendição — que ele provavelmente vai postar, divulgando a festa de graça.",
+        "Grátis e sem cadastro. Pelo link secreto você acompanha quem já confirmou e quem tentou escapar quantas vezes. RSVPs nunca foram tão honestos."
+      ],
+      "question": "Você vem na minha festa?",
+      "yesText": "Vou!",
+      "noText": "Não vou",
+      "answer": "Anotado! Te mando o endereço.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta. Um link único serve pra todos os convidados." },
+        { "q": "Como coloco as informações da festa?", "a": "Na mensagem que aparece depois do Sim: endereço, horário, tema — com texto formatado, imagens ou vídeo." },
+        { "q": "Consigo ver quem confirmou?", "a": "Sim. O link secreto de estatísticas mostra cada resposta, quando chegou e quantas tentativas de \"não vou\" foram frustradas." }
+      ]
+    },
+    "en": {
+      "label": "Party invite",
+      "title": "Fun interactive party invitation",
+      "metaDescription": "A birthday or party invite where saying no is impossible: the No button runs from the click. Free, no account.",
+      "h1": "The party invite nobody answers \"can't come\"",
+      "intro": [
+        "Static party invites get ignored. With Only Yes, your guest opens the question \"Are you coming to my party?\" and, if they try to click \"Can't make it\", the button runs away, shrinks and mocks them — while the screen fills with \"I'm in!\" until the RSVP happens by force.",
+        "After the Yes, you deliver the details: address, date, time, theme, what to bring. It supports rich text, invite images and even video. The guest also gets a playful receipt of their surrender — which they will probably post, promoting your party for free.",
+        "Free and no sign-up. The secret link shows who confirmed and who tried to escape how many times. RSVPs have never been this honest."
+      ],
+      "question": "Are you coming to my party?",
+      "yesText": "I'm in!",
+      "noText": "Can't make it",
+      "answer": "Noted! Sending you the address.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account. One unique link works for all your guests." },
+        { "q": "How do I add the party info?", "a": "In the message revealed after the Yes: address, time, theme — with rich text, images or video." },
+        { "q": "Can I see who confirmed?", "a": "Yes. The secret stats link shows every answer, when it arrived and how many \"can't come\" attempts were frustrated." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "madrinha-padrinho", "en": "bridesmaid-proposal" },
+    "icon": "crown",
+    "pt": {
+      "label": "Madrinha e padrinho",
+      "title": "Convite criativo para madrinha e padrinho",
+      "metaDescription": "Chame madrinhas e padrinhos com uma pergunta onde recusar é impossível. O convite que já começa a festa. Grátis.",
+      "h1": "\"Quer ser minha madrinha?\" — sem chance de dizer não",
+      "intro": [
+        "O convite pra madrinha ou padrinho merece mais que uma mensagem no WhatsApp. Com o Only Yes, a pessoa recebe um link com a pergunta — \"Quer ser minha madrinha?\" — e descobre que recusar não é uma opção: o botão Não foge do clique, encolhe, provoca, e botões de aceite tomam a tela.",
+        "Quando ela clicar no Sim, entra a sua homenagem: por que você escolheu essa pessoa, a foto de vocês, os detalhes do grande dia. E ela recebe um recibo divertido da própria rendição, feito pra postar nos stories e abrir oficialmente os trabalhos.",
+        "Crie um link para cada madrinha e padrinho, tudo grátis e sem cadastro. Pelo link secreto de cada convite você vê o momento exato em que cada Sim chegou."
+      ],
+      "question": "Quer ser minha madrinha?",
+      "yesText": "Claro que sim!",
+      "noText": "Não",
+      "answer": "Sabia que podia contar com você.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim. Crie quantos convites quiser, um link pra cada madrinha ou padrinho, sem pagar nada e sem conta." },
+        { "q": "Posso personalizar cada convite?", "a": "Sim. Cada pergunta tem texto livre, botões personalizados e uma mensagem final própria — com foto, texto formatado ou vídeo." },
+        { "q": "E se a pessoa tentar recusar?", "a": "O botão Não foge, encolhe e provoca até a pessoa desistir — no fim, só o \"Claro que sim!\" sobrevive na tela." }
+      ]
+    },
+    "en": {
+      "label": "Bridesmaid proposal",
+      "title": "Creative bridesmaid and groomsman proposal",
+      "metaDescription": "Ask your bridesmaids and groomsmen with a question where refusing is impossible. The invite that starts the party. Free.",
+      "h1": "\"Will you be my bridesmaid?\" — with no way to say no",
+      "intro": [
+        "The bridesmaid or groomsman ask deserves more than a plain text. With Only Yes, they get a link with the question — \"Will you be my bridesmaid?\" — and discover that refusing is not an option: the No button runs from the click, shrinks, teases, and accept buttons take over the screen.",
+        "When they click Yes, your tribute appears: why you chose them, a photo of you two, the details of the big day. They also get a playful receipt of their surrender, made to be posted on stories and officially kick things off.",
+        "Create one link per bridesmaid and groomsman, all free and without an account. Each invite's secret link shows you the exact moment every Yes arrived."
+      ],
+      "question": "Will you be my bridesmaid?",
+      "yesText": "Of course!",
+      "noText": "No",
+      "answer": "I knew I could count on you.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes. Create as many invites as you want, one link per person, no payment and no account." },
+        { "q": "Can I personalize each invite?", "a": "Yes. Every question has free text, custom buttons and its own final message — with photos, rich text or video." },
+        { "q": "What if they try to refuse?", "a": "The No button dodges, shrinks and teases until they give up — in the end, only \"Of course!\" survives on screen." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "dia-dos-namorados", "en": "valentine" },
+    "icon": "heart-straight",
+    "pt": {
+      "label": "Dia dos Namorados",
+      "title": "Pedido de Dia dos Namorados criativo",
+      "metaDescription": "Chame seu par pro Dia dos Namorados com uma pergunta onde o Não foge do clique. Surpresa garantida e grátis.",
+      "h1": "O pedido de Dia dos Namorados que só termina em Sim",
+      "intro": [
+        "Vai chamar alguém pro Dia dos Namorados? Faça disso um momento. A pessoa recebe seu link, lê \"Quer ser meu par no Dia dos Namorados?\" e — quando tenta o Não de brincadeira — o botão escapa do cursor, encolhe e provoca, enquanto a tela vai se enchendo de Sim.",
+        "Com o Sim garantido, revela-se a sua surpresa: o convite do jantar, a playlist de vocês, uma foto ou um vídeo especial. E a pessoa recebe um recibo divertido de quanto \"resistiu\" ao seu charme — spoiler: os dados mostram que ninguém resiste.",
+        "Grátis, sem conta, pronto em um minuto — dá tempo até pra quem deixou pra última hora. O link secreto mostra quando a resposta chegou e quantas fugas o seu Não sofreu."
+      ],
+      "question": "Quer ser meu par no Dia dos Namorados?",
+      "yesText": "Quero",
+      "noText": "Não",
+      "answer": "Melhor Dia dos Namorados de todos.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem cadastro — perfeito inclusive pra quem lembrou em cima da hora." },
+        { "q": "E se a pessoa tentar dizer não?", "a": "O botão Não foge, encolhe e provoca. Estatisticamente falando, a taxa de sucesso do Não aqui é 0.000%." },
+        { "q": "Posso revelar uma surpresa depois do Sim?", "a": "Sim: texto formatado, foto ou vídeo do YouTube — o convite do jantar, a playlist, o que você quiser." }
+      ]
+    },
+    "en": {
+      "label": "Valentine",
+      "title": "Creative way to ask someone to be your Valentine",
+      "metaDescription": "Ask your Valentine with a question where the No runs from the click. Guaranteed surprise, free and no account.",
+      "h1": "The Valentine ask that can only end in Yes",
+      "intro": [
+        "Asking someone to be your Valentine? Make it a moment. They get your link, read \"Will you be my Valentine?\" and — when they playfully try the No — the button escapes the cursor, shrinks and teases, while the screen fills up with Yes.",
+        "With the Yes secured, your surprise is revealed: the dinner invite, your shared playlist, a photo or a special video. They also get a playful receipt of how long they \"resisted\" your charm — spoiler: the data shows nobody does.",
+        "Free, no account, ready in a minute — even for last-minute romantics. The secret link shows when the answer arrived and how many escapes your No survived."
+      ],
+      "question": "Will you be my Valentine?",
+      "yesText": "Yes",
+      "noText": "No",
+      "answer": "Best Valentine ever.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no sign-up — perfect even if you remembered at the last minute." },
+        { "q": "What if they try to say no?", "a": "The No button dodges, shrinks and teases. Statistically speaking, the success rate of No here is 0.000%." },
+        { "q": "Can I reveal a surprise after the Yes?", "a": "Yes: rich text, a photo or a YouTube video — the dinner invite, the playlist, whatever you want." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "convite-de-baile", "en": "promposal" },
+    "icon": "music-notes",
+    "pt": {
+      "label": "Convite de baile",
+      "title": "Convite de baile de formatura criativo",
+      "metaDescription": "Chame seu par pro baile com uma pergunta onde o Não foge do clique. O promposal digital que vira história. Grátis.",
+      "h1": "O convite de baile que não aceita fora",
+      "intro": [
+        "Chamar alguém pro baile exige coragem — então garanta que a resposta seja Sim. Com o Only Yes, a pessoa abre seu link, vê \"Quer ir ao baile comigo?\" e descobre que o botão Não simplesmente não se deixa clicar: foge, encolhe, zomba, enquanto a tela inteira vira um mar de Sim.",
+        "Depois do Sim, entra o seu convite completo: a proposta por extenso, a foto do look, a promessa da melhor noite do ano. E a pessoa recebe um recibo divertido de quanto tentou escapar — que provavelmente vai parar nos stories da turma inteira.",
+        "Grátis, sem cadastro, feito em um minuto entre uma aula e outra. O link secreto ainda te conta o momento exato do Sim — pra você começar a procurar a roupa."
+      ],
+      "question": "Quer ir ao baile comigo?",
+      "yesText": "Quero!",
+      "noText": "Não",
+      "answer": "Vai ser épico.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta — o promposal mais barato e mais eficiente que existe." },
+        { "q": "E se a pessoa tentar dizer não?", "a": "O botão Não foge do cursor, encolhe e provoca, enquanto botões Sim se multiplicam. O fora é matematicamente impossível." },
+        { "q": "Funciona no celular?", "a": "Perfeitamente — o botão foge do dedo do mesmo jeito que foge do mouse. A maioria dos convites é respondida direto do WhatsApp." }
+      ]
+    },
+    "en": {
+      "label": "Promposal",
+      "title": "Creative digital promposal idea",
+      "metaDescription": "Ask someone to prom with a question where the No runs from the click. The digital promposal that becomes a story. Free.",
+      "h1": "The promposal that takes no rejection",
+      "intro": [
+        "Asking someone to prom takes guts — so make sure the answer is Yes. With Only Yes, they open your link, see \"Will you go to prom with me?\" and discover the No button simply won't be clicked: it runs, shrinks, mocks them, while the whole screen becomes a sea of Yes.",
+        "After the Yes, your full invite appears: the proposal in writing, the outfit photo, the promise of the best night of the year. They also get a playful receipt of how hard they tried to escape — which will probably end up on everyone's stories.",
+        "Free, no sign-up, made in a minute between classes. The secret link even tells you the exact moment of the Yes — so you can start looking for the outfit."
+      ],
+      "question": "Will you go to prom with me?",
+      "yesText": "Yes!",
+      "noText": "No",
+      "answer": "It is going to be epic.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account — the cheapest and most effective promposal there is." },
+        { "q": "What if they try to say no?", "a": "The No button runs from the cursor, shrinks and teases, while Yes buttons multiply. Rejection is mathematically impossible." },
+        { "q": "Does it work on phones?", "a": "Perfectly — the button runs from fingers just like it runs from the mouse. Most invites get answered right from WhatsApp." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "zoeira", "en": "prank" },
+    "icon": "smiley",
+    "pt": {
+      "label": "Zoeira",
+      "title": "Brincadeira de Sim ou Não pra zoar os amigos",
+      "metaDescription": "Crie uma pergunta impossível de negar e faça seus amigos admitirem qualquer coisa. O botão Não foge do clique. Grátis.",
+      "h1": "Faça qualquer pessoa admitir qualquer coisa",
+      "intro": [
+        "\"Você admite que eu estava certo?\" — agora imagine essa pergunta num link onde o botão \"Nunca\" foge do clique, encolhe, debocha, e a tela se enche de \"Admito\" até seu amigo capitular. Essa é a zoeira do Only Yes: uma pergunta de Sim ou Não onde só existe uma resposta.",
+        "Quando a vítima finalmente ceder, você entrega a sentença: \"Print tirado. Sem volta.\" — ou qualquer mensagem, imagem ou vídeo que complete a humilhação amistosa. E ela recebe um recibo oficial da derrota, com o número exato de tentativas de fuga, pronto pra você postar no grupo.",
+        "Grátis, sem conta, e com um painel secreto que registra cada tentativa frustrada de dizer não. A discussão do grupo termina aqui — com provas."
+      ],
+      "question": "Você admite que eu estava certo?",
+      "yesText": "Admito",
+      "noText": "Nunca",
+      "answer": "Print tirado. Sem volta.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta. Crie a pergunta, mande no grupo e assista à queda." },
+        { "q": "O que acontece quando tentam dizer não?", "a": "O botão foge do cursor, encolhe a cada tentativa e solta provocações — enquanto a tela se enche de botões de rendição." },
+        { "q": "Fica registrado quantas vezes a pessoa tentou negar?", "a": "Fica. O recibo mostra o número de fugas e o tempo de resistência, e o seu painel secreto guarda o histórico completo. Prova documental da teimosia." }
+      ]
+    },
+    "en": {
+      "label": "Prank",
+      "title": "Yes or No prank to troll your friends",
+      "metaDescription": "Create an undeniable question and make your friends admit anything. The No button runs from the click. Free.",
+      "h1": "Make anyone admit anything",
+      "intro": [
+        "\"Do you admit I was right?\" — now picture that question in a link where the \"Never\" button runs from the click, shrinks, mocks them, and the screen fills with \"I admit it\" until your friend capitulates. That's the Only Yes prank: a Yes or No question with only one possible answer.",
+        "When the victim finally caves, you deliver the sentence: \"Screenshot taken. No takebacks.\" — or any message, image or video that completes the friendly humiliation. They also get an official receipt of defeat, with the exact number of escape attempts, ready for you to post in the group chat.",
+        "Free, no account, and with a secret panel that logs every frustrated attempt to say no. The group argument ends here — with evidence."
+      ],
+      "question": "Do you admit I was right?",
+      "yesText": "I admit it",
+      "noText": "Never",
+      "answer": "Screenshot taken. No takebacks.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account. Create the question, drop it in the group chat and watch the fall." },
+        { "q": "What happens when they try to say no?", "a": "The button runs from the cursor, shrinks with every attempt and throws taunts — while the screen fills with surrender buttons." },
+        { "q": "Is the number of denial attempts recorded?", "a": "It is. The receipt shows escapes and resistance time, and your secret panel keeps the full history. Documented proof of stubbornness." }
+      ]
+    }
+  },
+  {
+    "slug": { "pt": "volta-pra-mim", "en": "second-chance" },
+    "icon": "arrow-u-up-left",
+    "pt": {
+      "label": "Segunda chance",
+      "title": "Pedido de segunda chance criativo",
+      "metaDescription": "Peça uma segunda chance com uma pergunta onde o Não foge do clique. Quebre o gelo com humor. Grátis e sem conta.",
+      "h1": "O pedido de segunda chance que derrete resistência",
+      "intro": [
+        "Pedir uma segunda chance é difícil — começar com uma risada ajuda. No Only Yes, a pessoa recebe seu link com a pergunta \"Me dá mais uma chance?\" e, ao tentar clicar em Não, vê o botão fugir, encolher e provocar, enquanto a tela vai se enchendo de Sim.",
+        "O riso abre espaço pra sua mensagem de verdade, que aparece depois do Sim: o que mudou, o que você entendeu, por que dessa vez é diferente. Com espaço pra texto completo, foto ou vídeo — do seu jeito.",
+        "É grátis, sem cadastro, e o link secreto mostra se a pessoa abriu, quanto resistiu e quando cedeu. Uma segunda chance começa com um Sim — aqui, ele é a única opção."
+      ],
+      "question": "Me dá mais uma chance?",
+      "yesText": "Dou",
+      "noText": "Não",
+      "answer": "Não vou desperdiçar.",
+      "faq": [
+        { "q": "É grátis?", "a": "Sim, grátis e sem conta." },
+        { "q": "Isso não é forçar a barra?", "a": "É uma brincadeira — a graça é a pessoa rir da insistência do botão. O Sim de verdade vem da sua mensagem depois, não do clique." },
+        { "q": "Como sei se a pessoa viu?", "a": "O link secreto mostra quando a resposta chegou e quanto tempo a pessoa \"resistiu\" — se o Sim veio rápido, é bom sinal." }
+      ]
+    },
+    "en": {
+      "label": "Second chance",
+      "title": "Creative way to ask for a second chance",
+      "metaDescription": "Ask for a second chance with a question where the No runs from the click. Break the ice with humor. Free, no account.",
+      "h1": "The second-chance ask that melts resistance",
+      "intro": [
+        "Asking for a second chance is hard — starting with a laugh helps. On Only Yes, they receive your link with the question \"Will you give me another chance?\" and, when trying to click No, watch the button run, shrink and tease, while the screen fills up with Yes.",
+        "The laughter opens space for your real message, revealed after the Yes: what changed, what you understood, why this time is different. With room for full text, a photo or a video — your way.",
+        "It's free, has no sign-up, and the secret link shows if they opened it, how long they resisted and when they gave in. A second chance starts with a Yes — here, it's the only option."
+      ],
+      "question": "Will you give me another chance?",
+      "yesText": "Yes",
+      "noText": "No",
+      "answer": "I will not waste it.",
+      "faq": [
+        { "q": "Is it free?", "a": "Yes, free and no account." },
+        { "q": "Isn't this too pushy?", "a": "It's a joke — the fun is laughing at the button's insistence. The real Yes comes from your message afterwards, not from the click." },
+        { "q": "How do I know they saw it?", "a": "The secret link shows when the answer arrived and how long they \"resisted\" — if the Yes came fast, that's a good sign." }
+      ]
+    }
+  }
+]

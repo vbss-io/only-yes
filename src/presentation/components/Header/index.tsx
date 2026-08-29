@@ -1,5 +1,9 @@
 import { EN } from "@/presentation/assets/en";
 import { PT } from "@/presentation/assets/pt";
+import {
+  galleryPath,
+  resolveOccasionLang,
+} from "@/presentation/config/occasions";
 import { useDarkMode } from "@/presentation/hooks/use-dark-mode";
 import { CheckCircle } from "@phosphor-icons/react";
 import { ReactNode } from "react";
@@ -35,6 +39,9 @@ export const Header = () => {
           <span>Only Yes</span>
         </S.Brand>
         <S.Actions>
+          <S.ModelsLink href={galleryPath(resolveOccasionLang(language))}>
+            {t("Modelos")}
+          </S.ModelsLink>
           <Switch
             variant="primary"
             iconOn="moon"
