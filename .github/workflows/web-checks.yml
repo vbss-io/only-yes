@@ -1,0 +1,86 @@
+name: Web Checks
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [prd]
+  pull_request:
+    branches: [main, prd]
+
+concurrency:
+  group: web-checks-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    name: web-static
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: yarn
+      - name: Install (frozen, no scripts)
+        run: yarn install --frozen-lockfile --ignore-scripts
+      - name: Lock guard (lockfile vs base)
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          BASE=origin/main
+          if [ "$EVENT_NAME" = "push" ]; then
+            if [ -n "$BEFORE_SHA" ] && ! echo "$BEFORE_SHA" | grep -Eq '^0+$' && git cat-file -e "$BEFORE_SHA^{commit}" 2>/dev/null; then
+              BASE="$BEFORE_SHA"
+            else
+              BASE=HEAD~1
+            fi
+          fi
+          echo "lock-guard base: $BASE"
+          node .github/lock-guard.mjs --base "$BASE"
+      - name: Lock guard (installed tree)
+        run: node .github/lock-guard.mjs --base HEAD --installed .
+      - name: Audit production dependencies
+        run: node .github/audit-gate.mjs
+      - name: Lint
+        run: yarn lint
+      - name: Typecheck
+        run: yarn typecheck
+      - name: Build
+        run: yarn build
+
+  tests:
+    name: web-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: yarn
+      - name: Install (frozen, no scripts)
+        run: yarn install --frozen-lockfile --ignore-scripts
+      - name: Tests with coverage gate
+        run: yarn test:coverage
+
+  web-checks:
+    name: web-checks
+    needs: [static, tests]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require every prerequisite job to pass
+        if: needs.static.result != 'success' || needs.tests.result != 'success'
+        run: |
+          echo "static=${{ needs.static.result }} tests=${{ needs.tests.result }}"
+          exit 1
+      - name: All prerequisites passed
+        run: echo "web-checks green"

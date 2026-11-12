@@ -30,3 +30,5 @@ templates/
 tasks/
 docs/
 project-base.md
+coverage
+.vitest

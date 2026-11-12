@@ -1,0 +1,8 @@
+[
+  {
+    "package": "vbss-translator",
+    "version": "2.0.0",
+    "reason": "own package (publisher vbss, repo vbss-io/vbss-translator), published 2026-11-10 from verified tag v2.0.0",
+    "until": "2026-11-24"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "package": "esbuild",
+    "version": "0.25.12",
+    "reason": "native binary download in postinstall"
+  }
+]
