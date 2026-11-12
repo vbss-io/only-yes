@@ -62,14 +62,23 @@ export const stubCanvasWithoutContext = (): void => {
   vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null)
 }
 
+export interface Clock {
+  now: number
+}
+
+export const stubClock = (start = 1000): Clock => {
+  const clock: Clock = { now: start }
+  vi.spyOn(performance, 'now').mockImplementation(() => clock.now)
+  return clock
+}
+
 export interface AnimationFrames {
   pending: () => number
   run: (stepMs: number, maxFrames?: number) => number
 }
 
-export const stubAnimationFrames = (): AnimationFrames => {
+export const stubAnimationFrames = (clock: Clock = { now: performance.now() }): AnimationFrames => {
   let queue: FrameRequestCallback[] = []
-  let clock = performance.now()
   vi.stubGlobal('requestAnimationFrame', (callback: FrameRequestCallback) => {
     queue.push(callback)
     return queue.length
@@ -84,8 +93,8 @@ export const stubAnimationFrames = (): AnimationFrames => {
       while (queue.length > 0 && frames < maxFrames) {
         const batch = queue
         queue = []
-        clock += stepMs
-        batch.forEach((callback) => callback(clock))
+        clock.now += stepMs
+        batch.forEach((callback) => callback(clock.now))
         frames += 1
       }
       return frames
