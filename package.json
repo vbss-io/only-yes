@@ -56,10 +56,11 @@
     "vitest": "5.0.5"
   },
   "resolutions": {
+    "**/@typescript-eslint/typescript-estree/minimatch": "11.0.1",
+    "@isaacs/nonrecursive-glob-match": "1.0.1",
     "@babel/runtime": "7.29.2",
     "ajv": "6.15.0",
     "axios": "1.20.0",
-    "brace-expansion": "1.1.21",
     "braces": "3.0.3",
     "cross-spawn": "7.0.6",
     "esbuild": "0.25.12",
