@@ -150,7 +150,7 @@ describe('Stats page content', () => {
     open()
 
     const tile = (await screen.findByText('Tempo médio até o Sim')).parentElement as HTMLElement
-    expect(within(tile).getByText('—')).toBeTruthy()
+    expect(within(tile).getByText('\u2014')).toBeTruthy()
     expect(screen.getByText('Ninguém respondeu ainda. Compartilhe o link!')).toBeTruthy()
   })
 

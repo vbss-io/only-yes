@@ -27,7 +27,7 @@ describe('Share', () => {
     expect(inputs).toHaveLength(2)
     expect(inputs[1].value).toBe(`${window.location.origin}/stats/abc#k3y`)
     expect(screen.getByText('Link secreto: acompanhe as respostas')).toBeTruthy()
-    expect(screen.getByText('Guarde este link — sem ele não dá pra recuperar os stats.')).toBeTruthy()
+    expect(screen.getByText('Guarde este link \u2014 sem ele não dá pra recuperar os stats.')).toBeTruthy()
   })
 
   it('copies the public link and confirms in the field', async () => {
