@@ -2,7 +2,6 @@ import { registerDependencies } from "@/infra/dependency-injection/Register";
 import translations from "@/presentation/assets/translations.json";
 import { Footer } from "@/presentation/components/Footer";
 import { Header } from "@/presentation/components/Header";
-import { Loading } from "@/presentation/components/Loading";
 import { Root } from "@/presentation/config/stitches.config";
 import { DarkModeProvider } from "@/presentation/contexts/dark-mode-context.tsx";
 import { Create } from "@/presentation/pages/Create";
@@ -58,7 +57,7 @@ function App() {
       >
         <Root>
           <Header />
-          <RouterProvider router={router} fallbackElement={<Loading />} />
+          <RouterProvider router={router} />
           <Footer />
         </Root>
       </TranslatorProvider>

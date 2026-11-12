@@ -3,7 +3,7 @@ import Highlight from "@tiptap/extension-highlight";
 import Image from "@tiptap/extension-image";
 import Placeholder from "@tiptap/extension-placeholder";
 import TextAlign from "@tiptap/extension-text-align";
-import TextStyle from "@tiptap/extension-text-style";
+import { TextStyle } from "@tiptap/extension-text-style";
 import Youtube from "@tiptap/extension-youtube";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
@@ -57,6 +57,7 @@ export const Editor = ({
       setContent && setContent(editor.getHTML());
     },
     editable: !viewMode,
+    shouldRerenderOnTransaction: true,
   });
 
   useEffect(() => {

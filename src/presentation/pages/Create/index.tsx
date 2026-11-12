@@ -21,7 +21,7 @@ import * as S from "./styles";
 const createQuestionForm = z.object({
   question: z
     .string({
-      required_error: "A Pergunta é obrigatória.",
+      error: "A Pergunta é obrigatória.",
     })
     .min(5, {
       message: "A Pergunta é obrigatória.",
@@ -29,14 +29,14 @@ const createQuestionForm = z.object({
     .superRefine((value, ctx) => {
       if (value === "<p></p>") {
         return ctx.addIssue({
-          code: z.ZodIssueCode.custom,
+          code: "custom",
           message: "A Pergunta é obrigatória.",
         });
       }
     }),
   yesText: z
     .string({
-      required_error: "A Reposta Positiva é obrigatória.",
+      error: "A Reposta Positiva é obrigatória.",
     })
     .min(1, {
       message: "A Reposta Positiva é obrigatória.",
@@ -46,7 +46,7 @@ const createQuestionForm = z.object({
     }),
   noText: z
     .string({
-      required_error: "A Reposta Negativa é obrigatória.",
+      error: "A Reposta Negativa é obrigatória.",
     })
     .min(1, {
       message: "A Reposta Negativa é obrigatória.",
