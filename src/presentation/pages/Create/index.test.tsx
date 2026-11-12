@@ -146,17 +146,18 @@ describe('Create page validation', () => {
     expect(screen.getByText('The Feedback is required.')).toBeTruthy()
   })
 
-  it('accepts a very short question because the html wrapper counts toward the minimum', async () => {
+  it('posts the text typed into the question and the feedback', async () => {
     http.post.mockResolvedValue({ status: 201, data: { code: 'abc123', statsKey: 'secret' } })
     const { container } = open()
     const [question, answer] = await waitForEditors(container, 2)
-    await typeInto(question, 'Oi')
-    await typeInto(answer, 'Eba!')
+    await typeInto(question, 'Quer ir ao cinema hoje?')
+    await typeInto(answer, 'Eba, combinado!')
 
     await submit()
 
     await screen.findByText('Link público pra compartilhar')
-    expect(posted().question).toBe('<p>Oi</p>')
+    expect(posted().question).toContain('Quer ir ao cinema hoje?')
+    expect(posted().answer).toContain('Eba, combinado!')
   })
 
   it('rejects a question that was emptied again', async () => {

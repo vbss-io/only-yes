@@ -1,7 +1,7 @@
 import { Redirect } from '@/presentation/pages/Redirect'
 import { renderWithProviders } from '@/test-support/presentation/providers'
 import { screen } from '@testing-library/react'
-import { useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 
 const Probe = () => {
@@ -12,9 +12,15 @@ const Probe = () => {
 
 describe('Redirect page', () => {
   it('sends a short link to the home page carrying the question code', async () => {
-    renderWithProviders(<Redirect />, { route: '/abc123', path: '/:code' })
+    renderWithProviders(
+      <Routes>
+        <Route path="/:code" element={<Redirect />} />
+        <Route path="/" element={<Probe />} />
+      </Routes>,
+      { route: '/abc123' }
+    )
 
-    expect(await screen.findByText('other-route')).toBeTruthy()
+    expect(await screen.findByText('home:/:abc123')).toBeTruthy()
   })
 
   it('navigates to the root with the last path segment as the code', async () => {
