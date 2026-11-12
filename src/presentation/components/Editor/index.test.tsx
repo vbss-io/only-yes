@@ -1,6 +1,6 @@
 import { Editor } from '@/presentation/components/Editor'
 import { renderWithProviders } from '@/test-support/presentation/providers'
-import { act, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
 
@@ -104,5 +104,74 @@ describe('Editor edit mode', () => {
     await waitFor(() => expect(prose(container).querySelector('h2')?.textContent).toBe('Title'))
     act(() => undefined)
     expect(prose(container).querySelector('p')?.textContent).toBe('Body')
+  })
+})
+
+describe('Editor keeps the plain feature set of the previous editor', () => {
+  it('drops links and underline from loaded html and keeps the text', async () => {
+    const { container } = renderWithProviders(
+      <Editor content='<p>see <a href="https://example.com">the link</a> and <u>under</u> line</p>' viewMode />
+    )
+
+    await waitFor(() => expect(prose(container).textContent).toBe('see the link and under line'))
+    expect(prose(container).querySelector('a')).toBeNull()
+    expect(prose(container).querySelector('u')).toBeNull()
+  })
+
+  it('drops links and underline from pasted html', async () => {
+    const setContent = vi.fn()
+    const user = userEvent.setup()
+    const { container } = renderWithProviders(<Editor content="" setContent={setContent} />)
+    await waitFor(() => expect(prose(container)).toBeTruthy())
+    await user.click(prose(container))
+
+    const html = '<p>go <a href="https://example.com">there</a> <u>now</u></p>'
+    fireEvent.paste(prose(container), {
+      clipboardData: { types: ['text/html'], getData: (type: string) => (type === 'text/html' ? html : '') },
+    })
+
+    await waitFor(() => expect(setContent).toHaveBeenCalled())
+    const stored = setContent.mock.calls.at(-1)?.[0] as string
+    expect(stored).toContain('go there now')
+    expect(stored).not.toContain('<a')
+    expect(stored).not.toContain('<u')
+  })
+
+  it('does nothing on Ctrl+U', async () => {
+    const setContent = vi.fn()
+    const user = userEvent.setup()
+    const { container } = renderWithProviders(<Editor content="" setContent={setContent} />)
+    await waitFor(() => expect(prose(container)).toBeTruthy())
+    await user.click(prose(container))
+
+    await user.keyboard('{Control>}u{/Control}plain')
+
+    await waitFor(() => expect(setContent).toHaveBeenLastCalledWith('<p>plain</p>'))
+    expect(prose(container).querySelector('u')).toBeNull()
+  })
+
+  it('keeps a typed url as plain text', async () => {
+    const setContent = vi.fn()
+    const user = userEvent.setup()
+    const { container } = renderWithProviders(<Editor content="" setContent={setContent} />)
+    await waitFor(() => expect(prose(container)).toBeTruthy())
+    await user.click(prose(container))
+
+    await user.keyboard('visit https://example.com now')
+
+    await waitFor(() => expect(setContent).toHaveBeenLastCalledWith('<p>visit https://example.com now</p>'))
+    expect(prose(container).querySelector('a')).toBeNull()
+  })
+
+  it('does not append an empty paragraph after a heading', async () => {
+    const setContent = vi.fn()
+    const user = userEvent.setup()
+    const { container } = renderWithProviders(<Editor content="<h2>Title</h2>" setContent={setContent} />)
+    await waitFor(() => expect(prose(container).querySelector('h2')).not.toBeNull())
+    await user.click(prose(container))
+    await user.keyboard('!')
+
+    await waitFor(() => expect(setContent).toHaveBeenCalled())
+    expect(setContent.mock.calls.at(-1)?.[0]).toMatch(/^<h2>[^<]*<\/h2>$/)
   })
 })
