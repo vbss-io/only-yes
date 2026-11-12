@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [prd]
-  pull_request:
-    branches: [main, prd]
 
 concurrency:
   group: web-checks-${{ github.ref }}
